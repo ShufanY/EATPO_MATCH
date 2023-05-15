@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F8F6F0;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.nav_bg{
+    margin: 40px 30px;
+    background-color: #F8F6F0CC;
+    box-shadow: 0px 1px 3px #9C918A80;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img{
+    width: 197px;
+    margin-left: 30px;
+    position: relative;
+    bottom: 16px;
+}
+
+.nav_icon img{
+    width: 45px;
+    margin-right: 30px;
+    position: relative;
+    bottom: 16px;
+}
+
+.nav_list{
+    width: 521px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.nav_list li{
+    color: #432F28;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+}
+
+span.login_link::after{
+    content: '';
+    border: 1px solid #432F28;
+    margin: 0px 6px;
+}
