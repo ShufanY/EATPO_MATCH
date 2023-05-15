@@ -48,5 +48,24 @@ body{
 span.login_link::after{
     content: '';
     border: 1px solid #432F28;
-    margin: 0px 6px;
+    margin: 0px 6px 0px 9px;
+}
+
+
+.main_banner{
+    display: flex;
+}
+
+.banner_content h2{
+    color: #432F28;
+    font-size: 48px;
+    font-weight: 700;
+}
+.banner_content p{
+    color: #432F28;
+    font-size: 18px;
+}
+
+.pic_main img{
+    width: 388px;
 }
