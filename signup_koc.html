@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EATPO MATCH | 會員註冊</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Secular+One&family=Nerko+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9b1b983220.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav_bg">
+            <div class="logo">
+                <img src="pic/logo.png" alt="EATPO MATCH">
+            </div>
+            <ul class="nav_list">
+                <li>
+                    <span class="login_link">登入</span>
+                    <span>註冊</span>
+                </li>
+                <li>服務介紹</li>
+                <li>KOC一覽</li>
+                <li>行銷諮詢</li>
+                <li>聯絡我們</li>
+            </ul>
+            <div class="nav_icon">
+                <img src="pic/member_icon.png" alt="會員中心">
+            </div>
+        </div>
+    </nav>
+    <section class="breadcrumb">
+        <span>首頁</span>
+        <i class="fa-solid fa-caret-right"></i>
+        <span>註冊</span>
+        <i class="fa-solid fa-caret-right"></i>
+        <span>我是KOC</span>
+    </section>
+    <section class="signup">
+        <h2 class="signup_title">會員註冊
+            <img src="pic/bracket_3.png" alt="">
+        </h2>
+        <div class="signup_tab">
+            <div class="signup_norest_bg">
+                <h3>我是餐廳業者</h3>
+            </div>
+            <div class="signup_koc_bg">
+                <h3>我是KOC</h3>
+            </div>
+        </div>
+        <div class="signup_koc_form">
+            <form>
+                <div class="signup_fields">
+                    <label for="email">
+                        <abbr title="required" aria-label="required">*</abbr>
+                        電子信箱
+                    </label>
+                    <input id="email" type="email" name="email" placeholder="此為日後登入帳號">
+                    <label for="password">
+                        <abbr title="required" aria-label="required">*</abbr>
+                        密碼
+                        <i class="fa-solid fa-eye-slash"></i>
+                    </label>
+                    <input id="password" type="password" name="password" placeholder="請輸入6-15碼英數混合密碼">
+                    <label for="password_repeat">
+                        <abbr title="required" aria-label="required">*</abbr>
+                        請再次輸入密碼
+                        <i class="fa-solid fa-eye-slash"></i>
+                    </label>
+                    <input id="password_repeat" type="password" name="password_repeat" placeholder="請輸入6-15碼英數混合密碼">
+                    <label for="username">
+                        <abbr title="required" aria-label="required">*</abbr>
+                        聯絡人姓名
+                    </label>
+                    <input id="username" type="text" name="username">
+                    <label for="usertel">
+                        <abbr title="required" aria-label="required">*</abbr>
+                        聯絡電話
+                    </label>
+                    <input id="usertel" type="tel" name="usertel">
+                    <label for="igname">
+                        <abbr title="required" aria-label="required">*</abbr>
+                        Instagram帳號名稱
+                    </label>
+                    <input id="igname" type="text" name="igname">
+                    <label for="igfollowers">
+                        <abbr title="required" aria-label="required">*</abbr>
+                        目前粉絲人數
+                    </label>
+                    <input id="igfollowers" type="text" name="igfollowers">
+                    <label for="igposts">
+                        <abbr title="required" aria-label="required">*</abbr>
+                        請提供2則與餐廳/美食相關的IG貼文網址
+                    </label>
+                    <input id="igposts" type="url" name="igposts">
+                    <input id="igposts" type="url" name="igposts">
+                </div>
+                <div class="signup_fields">
+                    <label for="kocpic">
+                        <abbr title="required" aria-label="required">*</abbr>
+                        大頭貼照片
+                    </label>
+                    <input id="kocpic" type="file" name="kocpic">
+                    <label for="foodpic">
+                        <abbr title="required" aria-label="required">*</abbr>
+                        KOC清單縮圖 (請選擇餐廳/美食相關照片)
+                    </label>
+                    <input id="foodpic" type="file" name="foodpic">
+                    <label for="region">
+                        <abbr title="required" aria-label="required">*</abbr>
+                        合作地區
+                    </label>
+                    <select name="region" id="region">
+                        <option value="">請選擇縣市</option>
+                        <option value="taipei">台北</option>
+                        <option value="newtaipei">新北</option>
+                        <option value="keelung">基隆</option>
+                        <option value="yilan">宜蘭</option>
+                        <option value="taoyuan">桃園</option>
+                        <option value="hsinchu">新竹</option>
+                        <option value="miaoli">苗栗</option>
+                        <option value="taichung">台中</option>
+                        <option value="changhua">彰化</option>
+                        <option value="nantou">南投</option>
+                        <option value="yunlin">雲林</option>
+                        <option value="chiayi">嘉義</option>
+                        <option value="tainan">台南</option>
+                        <option value="kaohsiung">高雄</option>
+                        <option value="pingtung">屏東</option>
+                        <option value="hualien">花蓮</option>
+                        <option value="taitung">台東</option>
+                        <option value="kinmen">金門</option>
+                        <option value="matsu">馬祖</option>
+                        <option value="penghu">澎湖</option>
+                    </select>
+                    <label for="category">
+                        <abbr title="required" aria-label="required">*</abbr>
+                        貼文類型
+                    </label>
+                    <select name="category" id="category">
+                        <option value="">請選擇標籤</option>
+                        <option value="taipei">人像</option>
+                        <option value="taipei">插畫</option>
+                        <option value="taipei">美食</option>
+                        <option value="taipei">親子</option>
+                        <option value="taipei">寵物</option>
+                        <option value="taipei">運動</option>
+                    </select>
+                    <label for="charge">
+                        <abbr title="required" aria-label="required">*</abbr>
+                        貼文收費
+                    </label>
+                    <select name="charge" id="charge">
+                        <option value="">請選擇最低費用</option>
+                        <option value="taipei">餐點互惠</option>
+                        <option value="taipei">2,000元</option>
+                        <option value="taipei">3,000元</option>
+                        <option value="taipei">4,000元</option>
+                        <option value="taipei">5,000元</option>
+                        <option value="taipei">另外洽談</option>
+                    </select>
+                    <div class="validation">
+                        <label for="validation">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            請輸入右側驗證碼
+                        </label>
+                        <div class="validation_pic">
+                            <img src="pic/validation_pic.png" alt="">
+                        </div>
+                        <input id="validation" type="text" name="validation">
+                    </div>
+                    <div class="koc_agree">
+                        <label for="agree">
+                            <input id="agree" type="checkbox" name="agree">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            <span>我同意網站
+                                <a href="#">服務條款 </a>及<a href="#"> 隱私權政策 </a>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </form>
+            <button class="signup_koc_btn" type="submit">
+                <span>確認送出</span>
+                <i class="fa-solid fa-circle-check"></i>
+            </button>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="menu">
+            <ul class="footer_menu">
+                <li>
+                    <span class="footer_login">登入</span>
+                    <span>註冊</span>
+                </li>
+                <li>服務介紹</li>
+                <li>KOC一覽</li>
+                <li>行銷諮詢</li>
+                <li>聯絡我們</li>
+                <li>會員中心</li>
+            </ul>
+            <div class="page_top">
+                <img src="pic/page_top.png" alt="Page Top">
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright ©&nbsp;&nbsp;
+            EATPO MATCH 2023&nbsp;&nbsp;
+            本網站為個人專題作品&nbsp;&nbsp;
+            僅供學習, 展示之用
+        </div>
+    </footer>
+</body>
+</html>

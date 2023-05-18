@@ -58,21 +58,27 @@ nav.navbar{
     display: flex;
     justify-content: space-between;
     margin-top: 12px;
+    margin-left: -160px;
+    /* outline: 1px solid red; */
 }
 
 .nav_list li{
     color: #432F28;
     font-size: 14px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 20px;
     letter-spacing: 1.5px;
 }
 
 span.login_link::after{
     content: '';
-    border: 1px solid #432F28;
-    margin: 0px 6px 0px 9px;
+    display: inline-block;
+    width: 2px;
+    height: 16px;
+    background-color: #432F28;
+    border-radius: 20px;
+    margin: 0px 6px -3px 9px;
 }
 
 section.main_banner{
@@ -133,10 +139,10 @@ button.banner_btn i{
 }
 
 .banner_bg img{
-    width: 792px;
+    width: 881px;
     position: absolute;
-    top: 15px;
-    left: 455px;
+    top: 0;
+    left: 395px;
     /* outline: 1px solid blue; */
 }
 
@@ -205,7 +211,7 @@ h2.service_title img{
     content: '';
     display: block;
     width: 60%;
-    height: 2px;
+    height: 3px;
     background-color: #F8F6F0;
     border-radius: 10px;
     margin: auto;
@@ -635,7 +641,7 @@ h2.form_title img{
     padding: 4px 8px 4px 12px;
 }
 
-button.form_btn{
+button.consulting_btn{
     border: none;
     width: 300px;
     background-color: #F38C09;
@@ -647,14 +653,14 @@ button.form_btn{
     right: 0;
     bottom: 0;
 }
-button.form_btn span{
+button.consulting_btn span{
     font-size: 20px;
     font-weight: 600;
     line-height: 50px;
     letter-spacing: 1.5px;
     margin-left: 36px;
 }
-button.form_btn i{
+button.consulting_btn i{
     font-size: 28px;
     position: relative;
     left: 60px;
@@ -741,8 +747,12 @@ h2.contact_title img{
 
 span.footer_login::after{
     content: '';
-    border: 1px solid #F8F6F0;
-    margin: 0px 6px 0px 9px;
+    display: inline-block;
+    width: 2px;
+    height: 16px;
+    background-color: #F8F6F0;
+    border-radius: 20px;
+    margin: 0px 6px -3px 9px;
 }
 .page_top img{
     width: 47px;
@@ -760,4 +770,715 @@ span.footer_login::after{
     letter-spacing: 1.5px;
     padding: 6px 60px;
     border-radius: 30px;
+}
+
+/* 會員登入 */
+
+section.breadcrumb{
+    margin-left: 60px;
+    font-size: 14px;
+    color: #432F28;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+    /* outline: 1px solid red; */
+}
+.breadcrumb i{
+    color: #9C918A;
+    font-size: 18px;
+    vertical-align: bottom;
+}
+
+section.login{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* outline: 1px solid red; */
+}
+h2.login_title{
+    position: relative;
+}
+h2.login_title img{
+    width: 425px;
+    position: absolute;
+    left: -132px;
+    top: -10px;
+}
+
+.login_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login_form form{
+    background-color: #BEE77A4D;
+    margin-top: 16px;
+    padding-bottom: 45px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.login_fields{
+    display: flex;
+    flex-direction: column;
+    margin: 16px 36px;
+}
+.login_fields label{
+    font-size: 16px;
+    color: #432F28;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 1.5px;
+    margin-left: 6px;
+}
+.login_fields input{
+    width: 400px;
+    border: 2px solid #9C918A;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+.login_fields input[type]{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    color: #432F28;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    line-height: 32px;
+    padding: 4px 8px 4px 12px;
+}
+.login_fields input::placeholder{
+    color: #9C918A;
+    font-weight: 300;
+}
+.password_icon{
+    color: #9c918ac0;
+    font-size: 16px;
+    margin-top: -46px;
+    margin-left: 366px;
+}
+.login_action{
+    display: flex;
+    gap: 6px;
+    margin: 20px 36px 24px 36px;
+    justify-content: space-between;
+}
+.login_remember label{
+    font-size: 15px;
+    color: #432F28;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+    /* outline: 1px solid red; */
+}
+.login_remember input[type=checkbox]{
+    display: none;
+}
+.login_remember input[type="checkbox"] + span::before{
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #9C918A;
+    border-radius: 6px;
+    background-color: #fff;
+    vertical-align: bottom;
+    margin: 0px 6px;
+}
+.login_remember input[type="checkbox"]:checked + span::before{
+    content: 'v';
+    font-family: 'Nerko One', cursive;
+    text-align: center;
+    line-height: 12px;
+    font-size: 22px;
+    color: #432F28;
+    font-weight: 400;
+}
+.login_link a{
+    font-size: 15px;
+    color: #432F28;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+}
+.login_link a:nth-child(1)::after{
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 22px;
+    margin: 0px 9px -6px 10px;
+    border-radius: 6px;
+    background-color: #F38C09;
+}
+
+button.login_btn{
+    border: none;
+    width: 300px;
+    background-color: #89C821;
+    color: #F8F6F0;
+    border-radius: 50px;
+    box-shadow: 0px 1px 3px #432F2880;
+    margin-top: -30px;
+    margin-bottom: 12px;
+}
+button.login_btn span{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 1.5px;
+    margin-left: 36px;
+}
+button.login_btn i{
+    font-size: 28px;
+    position: relative;
+    left: 60px;
+    top: 3px;
+}
+
+
+/* 會員註冊_餐廳 */
+section.signup{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2.signup_title{
+    position: relative;
+}
+h2.signup_title img{
+    width: 425px;
+    position: absolute;
+    left: -132px;
+    top: -10px;
+}
+.signup_tab{
+    display: flex;
+}
+.signup_rest_bg{
+    width: 252px;
+    height: 60px;
+    background-color: #F3CDBD;
+    border-radius: 60px 60px 0 0;
+    margin-top: 16px;
+    box-shadow: 0px 1px 3px #432F2880;
+    position: relative;
+}
+.signup_rest_bg h3{
+    font-size: 20px;
+    color: #432F28;
+    text-align: center;
+    line-height: 80px;
+    font-weight: 500;
+}
+.signup_rest_bg h3::after{
+    content: '';
+    display: block;
+    width: 60%;
+    height: 3px;
+    background-color: #F8F6F0;
+    border-radius: 10px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    margin-top: -22px;
+}
+.signup_nokoc_bg{
+    width: 252px;
+    height: 60px;
+    background-color: #FBE2C2;
+    border-radius: 60px 60px 0 0;
+    margin-top: 16px;
+    margin-left: -12px;
+}
+.signup_nokoc_bg h3{
+    font-size: 20px;
+    color: #F7C079;
+    text-align: center;
+    line-height: 72px;
+    font-weight: 500;
+}
+
+.signup_rest_form{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+.signup_rest_form form{
+    background-color: #F3CDBD;
+    box-shadow: 0px 1px 1px #432F2880;
+    padding-bottom: 24px;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+.signup_fields{
+    display: flex;
+    flex-direction: column;
+    margin: 36px 36px 0px 36px;
+}
+.signup_fields label{
+    font-size: 16px;
+    color: #432F28;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 1.5px;
+    margin-left: 6px;
+    position: relative;
+}
+.signup_fields label i{
+    color: #9c918ac0;
+    font-size: 16px;
+    position: absolute;
+    bottom: -30px;
+    left: 356px;
+}
+.signup_fields label abbr{
+    color: #DE4917;
+    text-decoration: none;
+}
+.signup_fields input{
+    width: 400px;
+    border: 2px solid #9C918A;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+.signup_fields input[type]{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+    color: #432F28;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    line-height: 32px;
+    padding: 4px 8px 4px 12px;
+}
+.signup_fields input::placeholder{
+    color: #9C918A;
+    font-weight: 300;
+}
+.validation{
+    position: relative;
+}
+.validation input{
+    width: 200px;
+}
+.validation_pic img{
+    width: 126px;
+    position: absolute;
+    left: 218px;
+    top: 32px;
+}
+.agree{
+    margin-top: 6px;
+}
+.agree label{
+    font-size: 16px;
+    color: #432F28;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+    margin-left: -4px;
+    /* outline: 1px solid red; */
+}
+.agree label input[type=checkbox]{
+    display: none;
+}
+.agree label input[type="checkbox"] + abbr::before{
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #9C918A;
+    border-radius: 6px;
+    background-color: #fff;
+    vertical-align: bottom;
+    margin: 0px 6px;
+}
+.agree label input[type="checkbox"]:checked + abbr::before{
+    content: 'v';
+    font-family: 'Nerko One', cursive;
+    text-align: center;
+    line-height: 12px;
+    font-size: 22px;
+    color: #432F28;
+    font-weight: 400;
+}
+.agree label span a{
+    text-decoration: none;
+    color: #BB3B10;
+}
+
+button.signup_rest_btn{
+    border: none;
+    width: 300px;
+    background-color: #DE4917;
+    color: #F8F6F0;
+    border-radius: 50px;
+    box-shadow: 0px 1px 3px #432F2880;
+    position: absolute;
+    bottom: 40px;
+    left: 510px;
+    z-index: 3;
+}
+button.signup_rest_btn span{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 1.5px;
+    margin-left: 36px;
+}
+button.signup_rest_btn i{
+    font-size: 28px;
+    position: relative;
+    left: 60px;
+    top: 3px;
+}
+
+
+/* 會員註冊_KOC */
+
+.signup_koc_bg{
+    width: 252px;
+    height: 60px;
+    background-color: #FBE2C2;
+    border-radius: 60px 60px 0 0;
+    margin-top: 16px;
+    box-shadow: 0px 1px 3px #432F2880;
+    position: relative;
+}
+.signup_koc_bg h3{
+    font-size: 20px;
+    color: #432F28;
+    text-align: center;
+    line-height: 80px;
+    font-weight: 500;
+}
+.signup_koc_bg h3::after{
+    content: '';
+    display: block;
+    width: 60%;
+    height: 3px;
+    background-color: #F8F6F0;
+    border-radius: 10px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    margin-top: -22px;
+}
+.signup_norest_bg{
+    width: 252px;
+    height: 60px;
+    background-color: #F3CDBD;
+    border-radius: 60px 60px 0 0;
+    margin-top: 16px;
+    margin-right: -12px;
+}
+.signup_norest_bg h3{
+    font-size: 20px;
+    color: #ECA07F;
+    text-align: center;
+    line-height: 72px;
+    font-weight: 500;
+}
+
+.signup_koc_form{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+.signup_koc_form form{
+    background-color: #FBE2C2;
+    box-shadow: 0px 1px 1px #432F2880;
+    padding-bottom: 24px;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+.koc_agree{
+    margin-top: 6px;
+}
+.koc_agree label{
+    font-size: 16px;
+    color: #432F28;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+    margin-left: -4px;
+    /* outline: 1px solid red; */
+}
+.koc_agree label input[type=checkbox]{
+    display: none;
+}
+.koc_agree label input[type="checkbox"] + abbr::before{
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #9C918A;
+    border-radius: 6px;
+    background-color: #fff;
+    vertical-align: bottom;
+    margin: 0px 6px;
+}
+.koc_agree label input[type="checkbox"]:checked + abbr::before{
+    content: 'v';
+    font-family: 'Nerko One', cursive;
+    text-align: center;
+    line-height: 12px;
+    font-size: 22px;
+    color: #432F28;
+    font-weight: 400;
+}
+.koc_agree label span a{
+    text-decoration: none;
+    color: #DA7F0C;
+}
+
+
+
+button.signup_koc_btn{
+    border: none;
+    width: 300px;
+    background-color: #F38C09;
+    color: #F8F6F0;
+    border-radius: 50px;
+    box-shadow: 0px 1px 3px #432F2880;
+    position: absolute;
+    bottom: 40px;
+    left: 510px;
+    z-index: 3;
+}
+button.signup_koc_btn span{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 1.5px;
+    margin-left: 36px;
+}
+button.signup_koc_btn i{
+    font-size: 28px;
+    position: relative;
+    left: 60px;
+    top: 3px;
+}
+
+
+/* KOC一覽 */
+
+section.filter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form.filter_list{
+    /* width: 1105px; */
+    border: 2px solid #9C918A;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+form.filter_list label{
+    font-size: 16px;
+    color: #432F28;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+}
+form.filter_list label i{
+    color: #628F17;
+}
+
+form.filter_list label input[type=checkbox]{
+    display: none;
+}
+form.filter_list label input[type="checkbox"] + span::before{
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #9C918A;
+    border-radius: 6px;
+    background-color: #fff;
+    vertical-align: bottom;
+    margin: 0px 8px;
+}
+form.filter_list label input[type="checkbox"]:checked + span::before{
+    content: 'v';
+    font-family: 'Nerko One', cursive;
+    text-align: center;
+    line-height: 12px;
+    font-size: 22px;
+    color: #89C821;
+    font-weight: 400;
+}
+
+button.reset_btn{
+    width: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #F8F6F0;
+    background-color: #9C918A;
+    box-shadow: 0px 1px 3px #432F2880;
+    border: none;
+    padding: 8px 36px;
+    border-radius: 30px;
+    cursor: pointer;
+    position: absolute;
+    bottom: -12px;
+    right: 30px;
+}
+
+
+section.koc_list{
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.koc_row{
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.koc_post{
+    position: relative;
+}
+.koc_list_pic img{
+    width: 200px;
+}
+.followers_tag{
+    width: 100px;
+    font-size: 12px;
+    text-align: center;
+    color: #F8F6F0;
+    background-color: #BB3B10B3;
+    border-radius: 10px 0px 10px 0px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 28px;
+    position: absolute;
+    bottom: 1px;
+    right: 0;
+}
+
+.koc_post label input[type="checkbox"]{
+    display: none;
+}
+
+.koc_post label input[type="checkbox"] + span::before{
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-image: url(../pic/add_icon_n.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+}
+
+.koc_post label input[type="checkbox"]:checked + span::before{
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-image: url(../pic/add_icon_y.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.koc_name{
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+}
+.koc_pic img{
+    width: 36px;
+}
+.koc_name span{
+    font-size: 14px;
+    color: #432F28;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 24px;
+    margin-left: 6px;
+}
+
+.pages{
+    margin-top: 30px;
+}
+.pages a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #9C918A;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    line-height: 24px;
+}
+.pages a:nth-child(1), .pages a i{
+    color: #432F28;
+    font-weight: 600;
+}
+
+.add_hint{
+    width: 50px;
+    background-color: #F8F6F0;
+    box-shadow: 0px 1px 3px #432F2880;
+    border-radius: 50px;
+    padding: 17px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 65%;
+    right: 5%;
+    z-index: 1;
+}
+.add_hint_icon{
+    margin-top: -24px;
+    margin-bottom: 8px;
+}
+.add_hint_icon img{
+    width: 28px;
+}
+.add_count{
+    width: 18px;
+    font-size: 12px;
+    color: #F8F6F0;
+    background-color: #DE4917;
+    border: 2px solid #F8F6F0;
+    font-weight: 500;
+    border-radius: 7px;
+    text-align: center;
+    line-height: 18px;
+    position: absolute;
+    right: 0px;
+    top: -14px;
+}
+.add_hint_box{
+    writing-mode: vertical-lr;
+    font-size: 16px;
+    color: #432F28;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 50px;
 }

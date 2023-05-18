@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EATPO MATCH | KOC一覽</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Secular+One&family=Nerko+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9b1b983220.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav_bg">
+            <div class="logo">
+                <img src="pic/logo.png" alt="EATPO MATCH">
+            </div>
+            <ul class="nav_list">
+                <li>
+                    <span class="login_link">登入</span>
+                    <span>註冊</span>
+                </li>
+                <li>服務介紹</li>
+                <li>KOC一覽</li>
+                <li>行銷諮詢</li>
+                <li>聯絡我們</li>
+            </ul>
+            <div class="nav_icon">
+                <img src="pic/member_icon.png" alt="會員中心">
+            </div>
+        </div>
+    </nav>
+    <section class="breadcrumb">
+        <span>首頁</span>
+        <i class="fa-solid fa-caret-right"></i>
+        <span>KOC一覽</span>
+    </section>
+    <section class="filter">
+        <form class="filter_list">
+            <label for="followers">粉絲人數
+                <i class="fa-solid fa-caret-right"></i>
+                <label for="two_k">
+                    <input type="checkbox" name="two_k" id="two_k">
+                    <span>2,000人↑</span>
+                </label>
+                <label for="five_k">
+                    <input type="checkbox" name="five_k" id="five_k">
+                    <span>5,000人↑</span>
+                </label>
+                <label for="eight_k">
+                    <input type="checkbox" name="eight_k" id="eight_k">
+                    <span>8,000人↑</span>
+                </label>
+                <label for="ten_k">
+                    <input type="checkbox" name="ten_k" id="ten_k">
+                    <span>10,000人↑</span>
+                </label>
+                <label for="twenty_k">
+                    <input type="checkbox" name="twenty_k" id="twenty_k">
+                    <span>20,000人↑</span>
+                </label>
+                <label for="thirty_k">
+                    <input type="checkbox" name="thirty_k" id="thirty_k">
+                    <span>30,000人↑</span>
+                </label>
+            </label>
+            <label for="region">合作地區
+                <i class="fa-solid fa-caret-right"></i>
+                <label for="region_tnk">
+                    <input type="checkbox" name="region_tnk" id="region_tnk">
+                    <span>北北基</span>
+                </label>
+                <label for="region_thm">
+                    <input type="checkbox" name="region_thm" id="region_thm">
+                    <span>桃竹苗</span>
+                </label>
+                <label for="region_tcn">
+                    <input type="checkbox" name="region_tcn" id="region_tcn">
+                    <span>中彰投</span>
+                </label>
+                <label for="region_yct">
+                    <input type="checkbox" name="region_yct" id="region_yct">
+                    <span>雲嘉南</span>
+                </label>
+                <label for="region_kp">
+                    <input type="checkbox" name="region_kp" id="region_kp">
+                    <span>高屏</span>
+                </label>
+                <label for="region_yht">
+                    <input type="checkbox" name="region_yht" id="region_yht">
+                    <span>宜花東</span>
+                </label>
+                <label for="region_pkm">
+                    <input type="checkbox" name="region_pkm" id="region_pkm">
+                    <span>澎金馬</span>
+                </label>
+            </label>
+            <label for="category">風格類型
+                <i class="fa-solid fa-caret-right"></i>
+                <label for="portrait">
+                    <input type="checkbox" name="portrait" id="portrait">
+                    <span>人像</span>
+                </label>
+                <label for="illustration">
+                    <input type="checkbox" name="illustration" id="illustration">
+                    <span>插畫</span>
+                </label>
+                <label for="food">
+                    <input type="checkbox" name="food" id="food">
+                    <span>美食</span>
+                </label>
+                <label for="child">
+                    <input type="checkbox" name="child" id="child">
+                    <span>親子</span>
+                </label>
+                <label for="pet">
+                    <input type="checkbox" name="pet" id="pet">
+                    <span>寵物</span>
+                </label>
+                <label for="sports">
+                    <input type="checkbox" name="sports" id="sports">
+                    <span>運動</span>
+                </label>
+            </label>
+            <label for="budget">貼文預算
+                <i class="fa-solid fa-caret-right"></i>
+                <label for="free_meals">
+                    <input type="checkbox" name="free_meals" id="free_meals">
+                    <span>餐點互惠</span>
+                </label>
+                <label for="twok_d">
+                    <input type="checkbox" name="twok_d" id="twok_d">
+                    <span>2,000元</span>
+                </label>
+                <label for="threek_d">
+                    <input type="checkbox" name="threek_d" id="threek_d">
+                    <span>3,000元</span>
+                </label>
+                <label for="fourk_d">
+                    <input type="checkbox" name="fourk_d" id="fourk_d">
+                    <span>4,000元</span>
+                </label>
+                <label for="fivek_d">
+                    <input type="checkbox" name="fivek_d" id="fivek_d">
+                    <span>5,000元</span>
+                </label>
+                <label for="bargain">
+                    <input type="checkbox" name="bargain" id="bargain">
+                    <span>另外洽談</span>
+                </label>
+            </label>
+            <button class="reset_btn" type="reset">重設</button>
+            </form>    
+    </section>
+    <section class="koc_list">
+        <div class="koc_row">
+            <div class="koc_details">
+                <div class="koc_post">
+                    <div class="koc_list_pic">
+                        <img src="pic/koc_list_pic_1.png" alt="">
+                    </div>
+                    <div class="followers_tag"> 
+                        粉絲數<span> 3.1K</span>
+                    </div>
+                    <label for="add_1">
+                        <input type="checkbox" name="add_1" id="add_1" checked><span></span>
+                    </label>
+                </div>
+                <div class="koc_name">
+                    <div class="koc_pic">
+                        <img src="pic/koc_pic_1.png" alt="">
+                    </div>
+                    <span>eatpomatch_01</span>
+                </div>
+            </div>
+            <div class="koc_details">
+                <div class="koc_post">
+                    <div class="koc_list_pic">
+                        <img src="pic/koc_list_pic_2.png" alt="">
+                    </div>
+                    <div class="followers_tag"> 
+                        粉絲數<span> 3.1K</span>
+                    </div>
+                    <label for="add_2">
+                        <input type="checkbox" name="add_2" id="add_2"><span></span>
+                    </label>
+                </div>
+                <div class="koc_name">
+                    <div class="koc_pic">
+                        <img src="pic/koc_pic_2.png" alt="">
+                    </div>
+                    <span>eatpomatch_02</span>
+                </div>
+            </div>
+            <div class="koc_details">
+                <div class="koc_post">
+                    <div class="koc_list_pic">
+                        <img src="pic/koc_list_pic_3.png" alt="">
+                    </div>
+                    <div class="followers_tag"> 
+                        粉絲數<span> 3.1K</span>
+                    </div>
+                    <label for="add_3">
+                        <input type="checkbox" name="add_3" id="add_3"><span></span>
+                    </label>
+                </div>
+                <div class="koc_name">
+                    <div class="koc_pic">
+                        <img src="pic/koc_pic_3.png" alt="">
+                    </div>
+                    <span>eatpomatch_03</span>
+                </div>
+            </div>
+            <div class="koc_details">
+                <div class="koc_post">
+                    <div class="koc_list_pic">
+                        <img src="pic/koc_list_pic_4.png" alt="">
+                    </div>
+                    <div class="followers_tag"> 
+                        粉絲數<span> 3.1K</span>
+                    </div>
+                    <label for="add_4">
+                        <input type="checkbox" name="add_4" id="add_4"><span></span>
+                    </label>
+                </div>
+                <div class="koc_name">
+                    <div class="koc_pic">
+                        <img src="pic/koc_pic_4.png" alt="">
+                    </div>
+                    <span>eatpomatch_04</span>
+                </div>
+            </div>
+        </div>
+        <div class="koc_row">
+            <div class="koc_details">
+                <div class="koc_post">
+                    <div class="koc_list_pic">
+                        <img src="pic/koc_list_pic_5.png" alt="">
+                    </div>
+                    <div class="followers_tag"> 
+                        粉絲數<span> 3.1K</span>
+                    </div>
+                    <label for="add_5">
+                        <input type="checkbox" name="add_5" id="add_5" checked><span></span>
+                    </label>
+                </div>
+                <div class="koc_name">
+                    <div class="koc_pic">
+                        <img src="pic/koc_pic_5.png" alt="">
+                    </div>
+                    <span>eatpomatch_05</span>
+                </div>
+            </div>
+            <div class="koc_details">
+                <div class="koc_post">
+                    <div class="koc_list_pic">
+                        <img src="pic/koc_list_pic_6.png" alt="">
+                    </div>
+                    <div class="followers_tag"> 
+                        粉絲數<span> 3.1K</span>
+                    </div>
+                    <label for="add_6">
+                        <input type="checkbox" name="add_6" id="add_6"><span></span>
+                    </label>
+                </div>
+                <div class="koc_name">
+                    <div class="koc_pic">
+                        <img src="pic/koc_pic_6.png" alt="">
+                    </div>
+                    <span>eatpomatch_06</span>
+                </div>
+            </div>
+            <div class="koc_details">
+                <div class="koc_post">
+                    <div class="koc_list_pic">
+                        <img src="pic/koc_list_pic_7.png" alt="">
+                    </div>
+                    <div class="followers_tag"> 
+                        粉絲數<span> 3.1K</span>
+                    </div>
+                    <label for="add_7">
+                        <input type="checkbox" name="add_7" id="add_7"><span></span>
+                    </label>
+                </div>
+                <div class="koc_name">
+                    <div class="koc_pic">
+                        <img src="pic/koc_pic_7.png" alt="">
+                    </div>
+                    <span>eatpomatch_07</span>
+                </div>
+            </div>
+            <div class="koc_details">
+                <div class="koc_post">
+                    <div class="koc_list_pic">
+                        <img src="pic/koc_list_pic_8.png" alt="">
+                    </div>
+                    <div class="followers_tag"> 
+                        粉絲數<span> 3.1K</span>
+                    </div>
+                    <label for="add_8">
+                        <input type="checkbox" name="add_8" id="add_8"><span></span>
+                    </label>
+                </div>
+                <div class="koc_name">
+                    <div class="koc_pic">
+                        <img src="pic/koc_pic_8.png" alt="">
+                    </div>
+                    <span>eatpomatch_08</span>
+                </div>
+            </div>
+        </div>
+        <div class="koc_row">
+            <div class="koc_details">
+                <div class="koc_post">
+                    <div class="koc_list_pic">
+                        <img src="pic/koc_list_pic_9.png" alt="">
+                    </div>
+                    <div class="followers_tag"> 
+                        粉絲數<span> 3.1K</span>
+                    </div>
+                    <label for="add_9">
+                        <input type="checkbox" name="add_9" id="add_9"><span></span>
+                    </label>
+                </div>
+                <div class="koc_name">
+                    <div class="koc_pic">
+                        <img src="pic/koc_pic_9.png" alt="">
+                    </div>
+                    <span>eatpomatch_09</span>
+                </div>
+            </div>
+            <div class="koc_details">
+                <div class="koc_post">
+                    <div class="koc_list_pic">
+                        <img src="pic/koc_list_pic_10.png" alt="">
+                    </div>
+                    <div class="followers_tag"> 
+                        粉絲數<span> 3.1K</span>
+                    </div>
+                    <label for="add_10">
+                        <input type="checkbox" name="add_10" id="add_10" checked><span></span>
+                    </label>
+                </div>
+                <div class="koc_name">
+                    <div class="koc_pic">
+                        <img src="pic/koc_pic_10.png" alt="">
+                    </div>
+                    <span>eatpomatch_10</span>
+                </div>
+            </div>
+            <div class="koc_details">
+                <div class="koc_post">
+                    <div class="koc_list_pic">
+                        <img src="pic/koc_list_pic_11.png" alt="">
+                    </div>
+                    <div class="followers_tag"> 
+                        粉絲數<span> 3.1K</span>
+                    </div>
+                    <label for="add_11">
+                        <input type="checkbox" name="add_11" id="add_11"><span></span>
+                    </label>
+                </div>
+                <div class="koc_name">
+                    <div class="koc_pic">
+                        <img src="pic/koc_pic_11.png" alt="">
+                    </div>
+                    <span>eatpomatch_11</span>
+                </div>
+            </div>
+            <div class="koc_details">
+                <div class="koc_post">
+                    <div class="koc_list_pic">
+                        <img src="pic/koc_list_pic_12.png" alt="">
+                    </div>
+                    <div class="followers_tag"> 
+                        粉絲數<span> 3.1K</span>
+                    </div>
+                    <label for="add_12">
+                        <input type="checkbox" name="add_12" id="add_12"><span></span>
+                    </label>
+                </div>
+                <div class="koc_name">
+                    <div class="koc_pic">
+                        <img src="pic/koc_pic_12.png" alt="">
+                    </div>
+                    <span>eatpomatch_12</span>
+                </div>
+            </div>
+        </div>
+        <div class="koc_row">
+            <div class="koc_details">
+                <div class="koc_post">
+                    <div class="koc_list_pic">
+                        <img src="pic/koc_list_pic_13.png" alt="">
+                    </div>
+                    <div class="followers_tag"> 
+                        粉絲數<span> 3.1K</span>
+                    </div>
+                    <label for="add_13">
+                        <input type="checkbox" name="add_13" id="add_13" checked><span></span>
+                    </label>
+                </div>
+                <div class="koc_name">
+                    <div class="koc_pic">
+                        <img src="pic/koc_pic_13.png" alt="">
+                    </div>
+                    <span>eatpomatch_13</span>
+                </div>
+            </div>
+            <div class="koc_details">
+                <div class="koc_post">
+                    <div class="koc_list_pic">
+                        <img src="pic/koc_list_pic_14.png" alt="">
+                    </div>
+                    <div class="followers_tag"> 
+                        粉絲數<span> 3.1K</span>
+                    </div>
+                    <label for="add_14">
+                        <input type="checkbox" name="add_14" id="add_14"><span></span>
+                    </label>
+                </div>
+                <div class="koc_name">
+                    <div class="koc_pic">
+                        <img src="pic/koc_pic_14.png" alt="">
+                    </div>
+                    <span>eatpomatch_14</span>
+                </div>
+            </div>
+            <div class="koc_details">
+                <div class="koc_post">
+                    <div class="koc_list_pic">
+                        <img src="pic/koc_list_pic_15.png" alt="">
+                    </div>
+                    <div class="followers_tag"> 
+                        粉絲數<span> 3.1K</span>
+                    </div>
+                    <label for="add_15">
+                        <input type="checkbox" name="add_15" id="add_15"><span></span>
+                    </label>
+                </div>
+                <div class="koc_name">
+                    <div class="koc_pic">
+                        <img src="pic/koc_pic_15.png" alt="">
+                    </div>
+                    <span>eatpomatch_15</span>
+                </div>
+            </div>
+            <div class="koc_details">
+                <div class="koc_post">
+                    <div class="koc_list_pic">
+                        <img src="pic/koc_list_pic_16.png" alt="">
+                    </div>
+                    <div class="followers_tag"> 
+                        粉絲數<span> 3.1K</span>
+                    </div>
+                    <label for="add_16">
+                        <input type="checkbox" name="add_16" id="add_16" checked><span></span>
+                    </label>
+                </div>
+                <div class="koc_name">
+                    <div class="koc_pic">
+                        <img src="pic/koc_pic_16.png" alt="">
+                    </div>
+                    <span>eatpomatch_16</span>
+                </div>
+            </div>
+        </div>
+        <div class="pages">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+        <div class="add_hint">
+            <div class="add_hint_icon">
+                <img src="pic/add_fixed.png" alt="">
+            </div>
+            <div class="add_count">5</div>
+            <div class="add_hint_box">待聯繫清單</div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="menu">
+            <ul class="footer_menu">
+                <li>
+                    <span class="footer_login">登入</span>
+                    <span>註冊</span>
+                </li>
+                <li>服務介紹</li>
+                <li>KOC一覽</li>
+                <li>行銷諮詢</li>
+                <li>聯絡我們</li>
+                <li>會員中心</li>
+            </ul>
+            <div class="page_top">
+                <img src="pic/page_top.png" alt="Page Top">
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright ©&nbsp;&nbsp;
+            EATPO MATCH 2023&nbsp;&nbsp;
+            本網站為個人專題作品&nbsp;&nbsp;
+            僅供學習, 展示之用
+        </div>
+    </footer>
+</body>
+</html>
