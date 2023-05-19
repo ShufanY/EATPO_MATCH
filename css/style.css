@@ -1272,7 +1272,6 @@ button.signup_koc_btn i{
     top: 3px;
 }
 
-
 /* KOC一覽 */
 
 section.filter{
@@ -1394,6 +1393,7 @@ section.koc_list{
     position: absolute;
     top: 6px;
     left: 6px;
+    cursor: pointer;
 }
 
 .koc_post label input[type="checkbox"]:checked + span::before{
@@ -1404,12 +1404,14 @@ section.koc_list{
     background-image: url(../pic/add_icon_y.png);
     background-size: 100%;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .koc_name{
     display: flex;
     align-items: center;
     padding: 8px 12px;
+    cursor: pointer;
 }
 .koc_pic img{
     width: 36px;
@@ -1434,7 +1436,7 @@ section.koc_list{
     letter-spacing: 1.5px;
     line-height: 24px;
 }
-.pages a:nth-child(1), .pages a i{
+.pages a:nth-child(1){
     color: #432F28;
     font-weight: 600;
 }
@@ -1449,7 +1451,7 @@ section.koc_list{
     flex-direction: column;
     align-items: center;
     position: fixed;
-    top: 65%;
+    bottom: 35%;
     right: 5%;
     z-index: 1;
 }
@@ -1482,3 +1484,178 @@ section.koc_list{
     letter-spacing: 3px;
     line-height: 50px;
 }
+
+/* KOC資料頁 */
+
+section.koc_info{
+    width: 100%;
+    height: 100%;
+    background-color: #9C918A80;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.info_box{
+    width: 566px;
+    background-color: #F8F6F0;
+    border-radius: 10px;
+    box-shadow: 0px 1px 3px #432F2880;
+    padding-top: 65px;
+    position: relative;
+    vertical-align: middle;
+}
+.info_bg{
+    background-color: #F7C0794D;
+    border-radius: 0px 0px 10px 10px;
+    padding: 40px 30px 24px 30px;
+    display: flex;
+}
+.info_content{
+    font-size: 15px;
+    color: #432F28;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 24px;
+    margin-right: 45px;
+}
+.info_name{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+    margin-top: -75px;
+}
+.info_name img{
+    width: 44px;
+}
+.info_item{
+    margin-bottom: 8px;
+}
+.info_item i{
+    color: #E88357;
+}
+.info_item span::before{
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 18px;
+    border-radius: 10px;
+    background-color: #E88357;
+    margin: 0px 6px -3px 6px;
+}
+.info_btn{
+    display: flex;
+    flex-direction: column;
+    margin-top: 170px;
+}
+.info_btn button{
+    width: 200px;
+    height: 40px;
+    color: #F8F6F0;
+    background-color: #89C821;
+    box-shadow: 0px 1px 2px #432F2880;
+    /* padding: 8px; */
+    border-radius: 30px;
+    border: none;
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+.info_btn button span{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 1px;
+    margin-left: 20px;
+}
+.info_btn button i{
+    font-size: 20px;
+    position: relative;
+    left: 10px;
+    top: 2px;
+}
+
+.info_btn label input[type="checkbox"]{
+    display: none;
+}
+
+.info_btn label input[type="checkbox"] + span::before{
+    content: '';
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    background-image: url(../pic/info_add_n.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    box-shadow: 0px 1px 2px #432F2880;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.info_btn label input[type="checkbox"]:checked + span::before{
+    content: '';
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    background-image: url(../pic/info_add_y.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    box-shadow: 0px 1px 2px #432F2880;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.post_item{
+    display: block;
+    width: 255px;
+    height: 443px;
+    background-image: url(../pic/info_post_1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: -76px;
+}
+.post_item .circle{
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    bottom: -440px;
+    left: 115px;
+    margin: 0px 3px;
+}
+.post_item .circle:nth-child(1){
+    background-color: #DE491799;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, .3);
+}
+.post_item .circle:nth-child(2){
+    background-color: #DE49174D;
+}
+.post_review input[type="checkbox"]{
+    display: none;
+}
+#post_content:checked + .post_item{
+    background-image: url(../pic/info_post_2.png);
+}
+#post_content:checked + .post_item .circle:nth-child(2){
+    background-color: #DE491799;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, .3);
+}
+#post_content:checked + .post_item .circle:nth-child(1){
+    background-color: #DE49174D;
+}
+
+.info_close img{
+    width: 36px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+}
+

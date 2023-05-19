@@ -484,6 +484,59 @@
             <div class="add_hint_box">待聯繫清單</div>
         </div>
     </section>
+    <section class="koc_info">
+        <div class="info_box">
+            <div class="info_bg">
+                <div class="info_content">
+                    <div class="info_name">
+                        <img src="pic/info_name.png" alt="">
+                        alisonholic
+                    </div>
+                    <div class="info_details">
+                        <div class="info_item">
+                            粉絲人數
+                            <i class="fa-solid fa-caret-right"></i>
+                            2.8K
+                        </div>
+                        <div class="info_item">
+                            合作地區
+                            <i class="fa-solid fa-caret-right"></i>
+                            台北市<span>新北市</span>
+                        </div>
+                        <div class="info_item">
+                            風格類型
+                            <i class="fa-solid fa-caret-right"></i>
+                            人像<span>美食</span>
+                        </div>
+                        <div class="info_item">
+                            貼文費用
+                            <i class="fa-solid fa-caret-right"></i>
+                            餐點互惠
+                        </div>
+                    </div>
+                    <div class="info_btn">
+                        <label for="info_add">
+                            <input type="checkbox" name="info_add" id="info_add" checked><span></span>
+                        </label>
+                        <button>
+                            <span>提出發案需求</span>
+                            <i class="fa-solid fa-circle-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="post_review">
+                    <input type="checkbox" id="post_content">
+                    <label for="post_content" class="post_item">
+                        <span class="circle"></span>
+                        <span class="circle"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="info_close">
+                <img src="pic/info_close.png" alt="">
+            </div>
+        </div>
+    </section>
     <footer class="footer">
         <div class="menu">
             <ul class="footer_menu">
@@ -508,5 +561,20 @@
             僅供學習, 展示之用
         </div>
     </footer>
+    <script>
+        let kocName = document.getElementsByClassName("koc_name");
+        let kocInfo = document.getElementsByClassName("koc_info");
+        let infoClose = document.getElementsByClassName("info_close")
+        function showInfo(){
+            kocInfo[0].style.display="flex";
+        }
+        function closeInfo(){
+            kocInfo[0].style.display="none";
+        }
+        for(let i = 0; i < kocName.length; i++){
+            kocName[i].addEventListener("click", showInfo, false);
+        }
+        infoClose[0].onclick = closeInfo;
+    </script>
 </body>
 </html>
