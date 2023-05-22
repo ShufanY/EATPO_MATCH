@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 body{
     background-color: #F8F6F0;
     font-family: 'Noto Sans TC', sans-serif;
@@ -318,7 +321,6 @@ h2.service_title img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 12px;
     cursor: pointer;
     position: relative;
 }
@@ -337,7 +339,6 @@ h2.service_title img{
     align-items: center;
     gap: 28px;
     margin-top: -75px;
-    padding-bottom: 12px;
 }
 .features_title{
     width: 271px;
@@ -363,22 +364,28 @@ h2.service_title img{
     letter-spacing: 1.5px;
     line-height: 24px;
     cursor: default;
+    opacity: 0;
+    padding-bottom: 14px;
+    transition: all .3s;
 }
 .features_info p strong{
     font-weight: 700;
 }
 .features_info{
-    display: none;
+    height: 0px;
+    transition: all .3s;
 }
 .features_item:hover .features_info{
-    display: block;
+    height: 90px;
+}
+.features_item:hover .features_info p{
+    opacity: 1;
 }
 .pointer_icon img{
-    width: 79px;
+    width: 65px;
     position: absolute;
-    top: 302px;
-    right: -30px;
-    z-index: 1;
+    top: 330px;
+    right: -10px;
     animation: pointer 1s linear infinite alternate-reverse;
 }
 @keyframes pointer{
@@ -386,7 +393,7 @@ h2.service_title img{
     100%{transform: translate(10px, 10px);}
 }
 .features_item:hover .pointer_icon img{
-    display: none;
+    opacity: 0;
 }
 
 .features_pic2{
@@ -765,24 +772,29 @@ h2.slider_title img{
     /* outline: 1px solid red; */
 }
 .post_line{
-    align-self: flex-end;
+    align-self: flex-start;
 }
 .post_line:nth-child(3){
-    transform: translateX(100px);
+    margin-left: -7%;
 }
 .post_list{
     display: flex;
     gap: 16px;
-    animation: slider 25s linear infinite;
+    animation: slider_100 30s linear infinite;
 }
+
 .post_pic img{
     width: 160px;
     transition: all .3s linear;
 }
 
-@keyframes slider{
+@keyframes slider_100{
     0%{transform: translateX(0);}
-    100%{transform: translateX(100%);}
+    100%{transform: translateX(-100%);}
+}
+@keyframes slider_93{
+    0%{transform: translateX(-3%);}
+    100%{transform: translateX(-93%);}
 }
 .post_pic img:hover{
     transform: scale(1.1);
@@ -1256,7 +1268,7 @@ h2.signup_title img{
     background-color: #F3CDBD;
     border-radius: 60px 60px 0 0;
     margin-top: 16px;
-    box-shadow: 0px 1px 3px #432F2880;
+    box-shadow: 0px 1px 3px #9C918A80;
     position: relative;
 }
 .signup_rest_bg h3{
@@ -1309,19 +1321,19 @@ h2.signup_title img{
 }
 .signup_rest_form form{
     background-color: #F3CDBD;
-    box-shadow: 0px 1px 1px #432F2880;
+    box-shadow: 0px 1px 1px #9C918A80;
     padding-bottom: 24px;
     border-radius: 10px;
     display: flex;
     position: relative;
     z-index: 1;
 }
-.signup_fields{
+.signup_fields, .signup_choose{
     display: flex;
     flex-direction: column;
     margin: 36px 36px 0px 36px;
 }
-.signup_fields label{
+.signup_fields label, .signup_choose label.choose_title{
     font-size: 16px;
     color: #432F28;
     font-weight: 400;
@@ -1337,7 +1349,7 @@ h2.signup_title img{
     bottom: -30px;
     left: 356px;
 }
-.signup_fields label abbr{
+.signup_fields label abbr, .signup_choose label abbr{
     color: #DE4917;
     text-decoration: none;
 }
@@ -1349,7 +1361,7 @@ h2.signup_title img{
     margin-bottom: 16px;
 }
 
-.signup_fields input[type]{
+.signup_fields input[type], .signup_choose input[type="text"]{
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 16px;
     color: #432F28;
@@ -1358,7 +1370,7 @@ h2.signup_title img{
     line-height: 32px;
     padding: 4px 8px 4px 12px;
 }
-.signup_fields input[type]:focus{
+.signup_fields input[type]:focus, .signup_choose input[type="text"]:focus{
     outline: none;
     border: 2px solid #f69267;
 }
@@ -1369,17 +1381,65 @@ h2.signup_title img{
     color: #9C918A;
     font-weight: 300;
 }
+.signup_choose input[type="file"]{
+    display: none;
+}
+label.kocpic, label.foodpic{
+    width: 126px;
+    border-radius: 10px;
+    border: 2px solid #9C918A;
+    background-color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    color: #432F28;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 32px;
+    padding: 4px 8px 4px 12px;
+    margin-bottom: 16px;
+}
+
+select{
+    font-family: 'Noto Sans TC', sans-serif;
+    width: 190px;
+    height: 44px;
+    border-radius: 10px;
+    border: 2px solid #9C918A;
+    background-color: #fff;
+    cursor: pointer;
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #432F28;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 32px;
+    padding: 0px 8px 0px 12px;
+    outline: none;
+    appearance: none;
+    background-image: url(../pic/select_arrow.png);
+    background-size: 15%;
+    background-repeat: no-repeat;
+    background-position:bottom -3px right 10px;
+}
+
 .validation{
     position: relative;
 }
 .validation input{
     width: 200px;
+    border: 2px solid #9C918A;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
 .validation_pic img{
     width: 126px;
     position: absolute;
     left: 218px;
     top: 32px;
+}
+.koc_agree{
+    padding-top: 24px;
 }
 .agree{
     margin-top: 6px;
@@ -1466,7 +1526,7 @@ button.signup_rest_btn i{
     background-color: #FBE2C2;
     border-radius: 60px 60px 0 0;
     margin-top: 16px;
-    box-shadow: 0px 1px 3px #432F2880;
+    box-shadow: 0px 1px 3px #9C918A80;
     position: relative;
 }
 .signup_koc_bg h3{
@@ -1515,8 +1575,9 @@ button.signup_rest_btn i{
     margin-bottom: 30px;
 }
 .signup_koc_form form{
+    width: 945px;
     background-color: #FBE2C2;
-    box-shadow: 0px 1px 1px #432F2880;
+    box-shadow: 0px 1px 1px #9C918A80;
     padding-bottom: 24px;
     border-radius: 10px;
     display: flex;
@@ -2156,13 +2217,14 @@ li.message_notify::after{
     font-size: 54px;
 }
 
+.block_table_wrap{
+    border: 2px solid #9C918A;
+    border-radius: 10px;
+    margin-left: 30px;
+}
 table.block_table{
     width: 780px;
     box-sizing: border-box;
-    border: 2px solid #9C918A;
-    border-radius: 10px;
-    border-collapse: separate;
-    margin-left: 30px;
 }
 table.block_table th{
     font-size: 16px;
@@ -2309,12 +2371,13 @@ li.nav_partner_posts::before{
     flex-direction: column;
     align-items: center;
 }
+.posts_table_wrap{
+    border: 2px solid #9C918A;
+    border-radius: 10px;
+}
 table.posts_table{
     width: 860px;
     box-sizing: border-box;
-    border: 2px solid #9C918A;
-    border-radius: 10px;
-    border-collapse: separate;
 }
 table.posts_table th{
     font-size: 16px;
