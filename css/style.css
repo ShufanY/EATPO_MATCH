@@ -94,13 +94,14 @@ span.login_link::after{
 
 section.main_banner{
     padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
     position: relative;
     overflow: hidden;
     /* outline: 1px solid blue; */
 }
 
 .banner_content{
-    margin: 0px 80px;
     position: relative;
     display: flex;
 }
@@ -108,6 +109,7 @@ section.main_banner{
 .banner_info{
     margin-top: 90px;
     z-index: 1;
+    padding-right: 45px;
 }
 
 .banner_info h2{
@@ -161,7 +163,7 @@ button.banner_btn i{
     width: 881px;
     position: absolute;
     top: 0;
-    left: 395px;
+    left: 415px;
     /* outline: 1px solid blue; */
 }
 
@@ -169,6 +171,7 @@ button.banner_btn i{
     width: 388px;
     margin-top: 20px;
     position: relative;
+    left: -45px;
 }
 .pic_main{
     position: relative;
@@ -176,7 +179,7 @@ button.banner_btn i{
 .banner_pic_rest{
     position: absolute;
     top: 222px;
-    left: -114px;
+    left: -159px;
 }
 .pic_cloud_rest img{
     width: 102px;
@@ -194,7 +197,7 @@ button.banner_btn i{
 .banner_pic_like{
     position: absolute;
     top: 180px;
-    right: -180px;
+    right: -130px;
 }
 .pic_cloud_like img{
     width: 75px;
