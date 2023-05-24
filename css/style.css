@@ -1064,19 +1064,22 @@ span.footer_login::after{
 
 section.breadcrumb{
     margin-left: 60px;
+    /* outline: 1px solid red; */
+}
+.breadcrumb a{
     font-size: 14px;
     color: #432F28;
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 1.5px;
-    /* outline: 1px solid red; */
+    text-decoration: none;
 }
 .breadcrumb i{
     color: #9C918A;
     font-size: 18px;
     vertical-align: bottom;
 }
-.breadcrumb span:last-child{
+.breadcrumb a:last-child{
     color: #DE4917;
 }
 
@@ -1160,7 +1163,7 @@ h2.login_title img{
 .login_action{
     display: flex;
     gap: 6px;
-    margin: 20px 36px 24px 36px;
+    margin: 20px 36px 0px 36px;
     justify-content: space-between;
 }
 .login_remember label{
@@ -1170,7 +1173,6 @@ h2.login_title img{
     line-height: 20px;
     letter-spacing: 1.5px;
     cursor: pointer;
-    /* outline: 1px solid red; */
 }
 .login_remember input[type=checkbox]{
     display: none;
@@ -1754,6 +1756,9 @@ section.koc_list{
     flex-direction: column;
     align-items: center;
 }
+.koc_row_wrap{
+    position: relative;
+}
 .koc_row{
     margin-top: 8px;
     display: flex;
@@ -1851,12 +1856,15 @@ section.koc_list{
     box-shadow: 0px 1px 3px #432F2880;
     border-radius: 50px;
     padding: 17px 0px;
+    margin-bottom: -135px;
+    margin-left: auto;
+    margin-right: -120px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: fixed;
-    bottom: 35%;
-    right: 5%;
+    position: sticky;
+    top: 90px;
+    right: 0;
     z-index: 1;
     cursor: pointer;
 }
