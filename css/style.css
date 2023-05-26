@@ -50,15 +50,21 @@ nav.navbar{
 }
 
 .nav_icon{
-    position: relative;
-}
-.nav_icon img{
     width: 45px;
+    height: 45px;
     margin-right: 30px;
     position: relative;
     bottom: 16px;
+    background-color: #ECA07F;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.nav_icon a:nth-child(2){
+.nav_icon img{
+    width: 22px;
+}
+.nav_icon span{
     font-size: 12px;
     line-height: 15px;
     color: #F8F6F0;
@@ -72,8 +78,8 @@ nav.navbar{
     text-decoration: none;
     border: 2px solid #F8F6F0;
     position: absolute;
-    bottom: 14px;
-    left: 50%;
+    bottom: -3px;
+    right: -12px;
 }
 
 .nav_list{
@@ -397,13 +403,15 @@ h2.service_title img{
 }
 .features_info{
     height: 0px;
-    transition: all .3s;
+    transition: all .3s .2s;
 }
 .features_item:hover .features_info{
     height: 90px;
+    transition: all .3s;
 }
 .features_item:hover .features_info p{
     opacity: 1;
+    transition: all .3s .2s;
 }
 .pointer_icon img{
     width: 65px;
@@ -1791,6 +1799,7 @@ section.koc_list{
 }
 .koc_list_pic img{
     width: 200px;
+    cursor: pointer;
 }
 .followers_tag{
     width: 100px;

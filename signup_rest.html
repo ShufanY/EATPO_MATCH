@@ -17,24 +17,26 @@
     <script src="https://kit.fontawesome.com/9b1b983220.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar">
+    <nav id="navbar" class="navbar">
         <div class="nav_bg">
             <div class="logo">
                 <a href="index.html"><img src="pic/logo.png" alt="EATPO MATCH"></a>
             </div>
             <ul class="nav_list">
-                <li>
-                    <a href="login.html"><span class="login_link">登入</span></a>
-                    <a href="signup_rest.html"><span>註冊</span></a>
-                </li>
                 <li><a href="index.html#service">服務介紹</a></li>
                 <li><a href="koc_list.html">KOC一覽</a></li>
                 <li><a href="index.html#consulting_form">行銷諮詢</a></li>
                 <li><a href="index.html#contact_us">聯絡我們</a></li>
+                <li>
+                    <a href="login.html"><span class="login_link">登入</span></a>
+                    <a href="signup_rest.html"><span>註冊</span></a>
+                </li>
             </ul>
-            <div class="nav_icon">
-                <a href="member_center.html"><img src="pic/member_icon.png" alt="會員中心"></a>
-            </div>
+            <a href="member_center.html">
+                <div class="nav_icon">
+                    <img src="pic/btn_user.png" alt="會員中心">
+                </div>
+            </a>
         </div>
     </nav>
     <section class="breadcrumb">
@@ -123,23 +125,23 @@
             </form>
             <a href="index.html">
                 <button class="signup_rest_btn" type="submit">
-                <span>確認送出</span>
-                <i class="fa-solid fa-circle-check"></i>
-            </button>
+                    <span>確認送出</span>
+                    <i class="fa-solid fa-circle-check"></i>
+                </button>
             </a>
         </div>
     </section>
     <footer class="footer">
         <div class="menu">
             <ul class="footer_menu">
-                <li>
-                    <a href="login.html"><span class="footer_login">登入</span></a>
-                    <a href="signup_rest.html"><span>註冊</span></a>
-                </li>
                 <li><a href="index.html#service">服務介紹</a></li>
                 <li><a href="koc_list.html">KOC一覽</a></li>
                 <li><a href="index.html#consulting_form">行銷諮詢</a></li>
                 <li><a href="index.html#contact_us">聯絡我們</a></li>
+                <li>
+                    <a href="login.html"><span class="footer_login">登入</span></a>
+                    <a href="signup_rest.html"><span>註冊</span></a>
+                </li>
                 <li><a href="member_center.html">會員中心</a></li>
             </ul>
         </div>
@@ -149,5 +151,14 @@
             僅供學習, 展示之用
         </div>
     </footer>
+
+
+    <script>
+        let signupRestBtn = document.getElementsByTagName("button");
+        function signupRestClick(){
+	        window.alert("感謝您的註冊，歡迎開始使用服務 !");
+        }
+        signupRestBtn[0].addEventListener("click", signupRestClick, false);
+    </script>
 </body>
 </html>
