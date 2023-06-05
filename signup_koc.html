@@ -62,142 +62,160 @@
         </div>
         <div class="signup_koc_form">
             <form>
-                <div class="signup_fields">
-                    <label for="email">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        電子信箱
-                    </label>
-                    <input id="email" type="email" name="email" placeholder="此為日後登入帳號">
-                    <label for="password">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        密碼
-                        <i class="fa-solid fa-eye-slash"></i>
-                    </label>
-                    <input id="password" type="password" name="password" placeholder="請輸入6-15碼英數混合密碼">
-                    <label for="password_repeat">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        請再次輸入密碼
-                        <i class="fa-solid fa-eye-slash"></i>
-                    </label>
-                    <input id="password_repeat" type="password" name="password_repeat" placeholder="請輸入6-15碼英數混合密碼">
-                    <label for="username">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        聯絡人姓名
-                    </label>
-                    <input id="username" type="text" name="username">
-                    <label for="usertel">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        聯絡電話
-                    </label>
-                    <input id="usertel" type="tel" name="usertel">
-                    <label for="igname">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        Instagram帳號名稱
-                    </label>
-                    <input id="igname" type="text" name="igname">
-                    <label for="igfollowers">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        目前粉絲人數
-                    </label>
-                    <input id="igfollowers" type="text" name="igfollowers">
-                    <label for="igposts">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        請提供2則與餐廳/美食相關的IG貼文網址
-                    </label>
-                    <input id="igposts" type="url" name="igposts">
-                    <input id="igposts" type="url" name="igposts">
-                </div>
-                <div class="signup_choose">
-                    <label class="choose_title">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        大頭貼照片<br>
-                    </label>
-                    <label for="kocpic" class="kocpic">選擇照片上傳
-                        <i class="fa-solid fa-chevron-right"></i>
-                        <input id="kocpic" type="file" name="kocpic">
-                    </label>
-                    <label class="choose_title">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        KOC一覽頁縮圖 (請選擇餐廳/美食相關照片)
-                    </label>
-                    <label for="foodpic" class="foodpic">選擇照片上傳
-                        <i class="fa-solid fa-chevron-right"></i>
-                        <input id="foodpic" type="file" name="foodpic">
-                    </label>
-                    <label for="region" class="choose_title">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        合作地區
-                    </label>
-                    <select name="region" id="region">
-                        <option value="">請選擇縣市</option>
-                        <option value="taipei">台北</option>
-                        <option value="newtaipei">新北</option>
-                        <option value="keelung">基隆</option>
-                        <option value="yilan">宜蘭</option>
-                        <option value="taoyuan">桃園</option>
-                        <option value="hsinchu">新竹</option>
-                        <option value="miaoli">苗栗</option>
-                        <option value="taichung">台中</option>
-                        <option value="changhua">彰化</option>
-                        <option value="nantou">南投</option>
-                        <option value="yunlin">雲林</option>
-                        <option value="chiayi">嘉義</option>
-                        <option value="tainan">台南</option>
-                        <option value="kaohsiung">高雄</option>
-                        <option value="pingtung">屏東</option>
-                        <option value="hualien">花蓮</option>
-                        <option value="taitung">台東</option>
-                        <option value="kinmen">金門</option>
-                        <option value="matsu">馬祖</option>
-                        <option value="penghu">澎湖</option>
-                    </select>
-                    <label for="category" class="choose_title">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        貼文類型
-                    </label>
-                    <select name="category" id="category">
-                        <option value="">請選擇標籤</option>
-                        <option value="taipei">人像</option>
-                        <option value="taipei">插畫</option>
-                        <option value="taipei">美食</option>
-                        <option value="taipei">親子</option>
-                        <option value="taipei">寵物</option>
-                        <option value="taipei">運動</option>
-                    </select>
-                    <label for="charge" class="choose_title">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        貼文收費
-                    </label>
-                    <select name="charge" id="charge">
-                        <option value="">請選擇最低費用</option>
-                        <option value="taipei">餐點互惠</option>
-                        <option value="taipei">2,000元</option>
-                        <option value="taipei">3,000元</option>
-                        <option value="taipei">4,000元</option>
-                        <option value="taipei">5,000元</option>
-                        <option value="taipei">另外洽談</option>
-                    </select>
-                    <div class="validation">
-                        <label for="validation" class="choose_title">
+                <div class="signup_wrap">
+                    <div class="signup_fields">
+                        <label for="email">
                             <abbr title="required" aria-label="required">*</abbr>
-                            請輸入右側驗證碼
+                            電子信箱
                         </label>
-                        <div class="validation_pic">
-                            <img src="pic/validation_pic.png" alt="">
+                        <input id="email" type="email" name="email" placeholder="此為日後登入帳號">
+                        <label for="password">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            密碼
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </label>
+                        <input id="password" type="password" name="password" placeholder="請輸入6-15碼英數混合密碼">
+                        <label for="password_repeat">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            請再次輸入密碼
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </label>
+                        <input id="password_repeat" type="password" name="password_repeat" placeholder="請輸入6-15碼英數混合密碼">
+                        <label for="username">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            聯絡人姓名
+                        </label>
+                        <input id="username" type="text" name="username">
+                        <label for="usertel">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            聯絡電話
+                        </label>
+                        <input id="usertel" type="tel" name="usertel">
+                        <label for="igname">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            Instagram帳號名稱
+                        </label>
+                        <input id="igname" type="text" name="igname">
+                        <label for="igfollowers">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            目前粉絲人數
+                        </label>
+                        <input id="igfollowers" type="text" name="igfollowers">
+                        <label for="igposts">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            請提供2則與餐廳/美食相關的IG貼文網址
+                        </label>
+                        <input id="igposts" type="url" name="igposts">
+                        <input id="igposts" type="url" name="igposts">
+                    </div>
+                    <div class="signup_choose">
+                        <label class="choose_title">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            大頭貼照片<br>
+                        </label>
+                        <div class="choose_wrap">
+                            <label for="kocpic" class="kocpic">選擇照片上傳
+                                <i class="fa-solid fa-chevron-right"></i>
+                                <input id="kocpic" type="file" name="kocpic">
+                            </label>
+                            <div class="kocpic_choose">
+                                <div class="crop_icon">
+                                    <i class="fa-solid fa-crop"></i>
+                                </div>
+                            </div>
                         </div>
-                        <input id="validation" type="text" name="validation">
-                    </div>
-                    <div class="koc_agree">
-                        <label for="agree">
-                            <input id="agree" type="checkbox" name="agree">
+                        
+                        <label class="choose_title">
                             <abbr title="required" aria-label="required">*</abbr>
-                            <span>我同意網站
-                                <a href="#">服務條款 </a>及<a href="#"> 隱私權政策 </a>
-                            </span>
+                            KOC一覽頁縮圖 (請選擇餐廳/美食相關照片)
                         </label>
+                        <div class="choose_wrap">
+                            <label for="foodpic" class="foodpic">選擇照片上傳
+                                <i class="fa-solid fa-chevron-right"></i>
+                                <input id="foodpic" type="file" name="foodpic">
+                            </label>
+                            <div class="foodpic_choose">
+                                <div class="crop_icon">
+                                    <i class="fa-solid fa-crop"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <label for="region" class="choose_title">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            合作地區
+                        </label>
+                        <select name="region" id="region">
+                            <option value="">請選擇1~3個</option>
+                            <option value="taipei">台北</option>
+                            <option value="newtaipei">新北</option>
+                            <option value="keelung">基隆</option>
+                            <option value="yilan">宜蘭</option>
+                            <option value="taoyuan">桃園</option>
+                            <option value="hsinchu">新竹</option>
+                            <option value="miaoli">苗栗</option>
+                            <option value="taichung">台中</option>
+                            <option value="changhua">彰化</option>
+                            <option value="nantou">南投</option>
+                            <option value="yunlin">雲林</option>
+                            <option value="chiayi">嘉義</option>
+                            <option value="tainan">台南</option>
+                            <option value="kaohsiung">高雄</option>
+                            <option value="pingtung">屏東</option>
+                            <option value="hualien">花蓮</option>
+                            <option value="taitung">台東</option>
+                            <option value="kinmen">金門</option>
+                            <option value="matsu">馬祖</option>
+                            <option value="penghu">澎湖</option>
+                        </select>
+                        <label for="category" class="choose_title">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            貼文類型
+                        </label>
+                        <select name="category" id="category">
+                            <option value="">請選擇1~3個</option>
+                            <option value="taipei">人像</option>
+                            <option value="taipei">插畫</option>
+                            <option value="taipei">美食</option>
+                            <option value="taipei">親子</option>
+                            <option value="taipei">寵物</option>
+                            <option value="taipei">運動</option>
+                        </select>
+                        <label for="charge" class="choose_title">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            貼文收費
+                        </label>
+                        <select name="charge" id="charge">
+                            <option value="">請選擇最低費用</option>
+                            <option value="taipei">餐點互惠</option>
+                            <option value="taipei">2,000元</option>
+                            <option value="taipei">3,000元</option>
+                            <option value="taipei">4,000元</option>
+                            <option value="taipei">5,000元</option>
+                            <option value="taipei">另外洽談</option>
+                        </select>
+                        <div class="validation">
+                            <label for="validation" class="choose_title">
+                                <abbr title="required" aria-label="required">*</abbr>
+                                請輸入右側驗證碼
+                            </label>
+                            <div class="validation_pic">
+                                <img src="pic/validation_pic.png" alt="">
+                            </div>
+                            <input id="validation" type="text" name="validation">
+                        </div>
                     </div>
+                </div>
+                <div class="koc_agree">
+                    <label for="agree">
+                        <input id="agree" type="checkbox" name="agree">
+                        <abbr title="required" aria-label="required">*</abbr>
+                        <span>我同意網站
+                            <a href="#">服務條款 </a>及<a href="#"> 隱私權政策 </a>
+                        </span>
+                    </label>
                 </div>
             </form>
+            
             <a href="index.html">
                 <button class="signup_koc_btn" type="submit">
                     <span>確認送出</span>
@@ -213,10 +231,6 @@
                 <li><a href="koc_list.html">KOC一覽</a></li>
                 <li><a href="index.html#consulting_form">行銷諮詢</a></li>
                 <li><a href="index.html#contact_us">聯絡我們</a></li>
-                <li>
-                    <a href="login.html"><span class="footer_login">登入</span></a>
-                    <a href="signup_rest.html"><span>註冊</span></a>
-                </li>
                 <li><a href="member_center.html">會員中心</a></li>
             </ul>
         </div>

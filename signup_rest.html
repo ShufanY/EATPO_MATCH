@@ -62,65 +62,67 @@
         </div>
         <div class="signup_rest_form">
             <form>
-                <div class="signup_fields">
-                    <label for="email">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        電子信箱
-                    </label>
-                    <input id="email" type="email" name="email" placeholder="此為日後登入帳號">
-                    <label for="password">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        密碼
-                        <i class="fa-solid fa-eye-slash"></i>
-                    </label>
-                    <input id="password" type="password" name="password" placeholder="請輸入6-15碼英數混合密碼">
-                    <label for="password_repeat">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        請再次輸入密碼
-                        <i class="fa-solid fa-eye-slash"></i>
-                    </label>
-                    <input id="password_repeat" type="password" name="password_repeat" placeholder="請輸入6-15碼英數混合密碼">
-                    <label for="username">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        聯絡人姓名
-                    </label>
-                    <input id="username" type="text" name="username">
-                    <label for="usertel">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        聯絡電話
-                    </label>
-                    <input id="usertel" type="tel" name="usertel">
-                </div>
-                <div class="signup_fields">
-                    <label for="restname">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        餐廳名稱
-                    </label>
-                    <input id="restname" type="text" name="restname">
-                    <label for="restaddr">
-                        <abbr title="required" aria-label="required">*</abbr>
-                        餐廳地址
-                    </label>
-                    <input id="restaddr" type="text" name="restaddr">
-                    <div class="validation">
-                        <label for="validation">
+                <div class="signup_wrap">
+                    <div class="signup_fields">
+                        <label for="email">
                             <abbr title="required" aria-label="required">*</abbr>
-                            請輸入右側驗證碼
+                            電子信箱
                         </label>
-                        <div class="validation_pic">
-                            <img src="pic/validation_pic.png" alt="">
+                        <input id="email" type="email" name="email" placeholder="此為日後登入帳號">
+                        <label for="password">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            密碼
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </label>
+                        <input id="password" type="password" name="password" placeholder="請輸入6-15碼英數混合密碼">
+                        <label for="password_repeat">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            請再次輸入密碼
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </label>
+                        <input id="password_repeat" type="password" name="password_repeat" placeholder="請輸入6-15碼英數混合密碼">
+                        <label for="username">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            聯絡人姓名
+                        </label>
+                        <input id="username" type="text" name="username">
+                    </div>
+                    <div class="signup_fields">
+                        <label for="usertel">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            聯絡電話
+                        </label>
+                        <input id="usertel" type="tel" name="usertel">
+                        <label for="restname">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            餐廳名稱
+                        </label>
+                        <input id="restname" type="text" name="restname">
+                        <label for="restaddr">
+                            <abbr title="required" aria-label="required">*</abbr>
+                            餐廳地址
+                        </label>
+                        <input id="restaddr" type="text" name="restaddr">
+                        <div class="validation">
+                            <label for="validation">
+                                <abbr title="required" aria-label="required">*</abbr>
+                                請輸入右側驗證碼
+                            </label>
+                            <div class="validation_pic">
+                                <img src="pic/validation_pic.png" alt="">
+                            </div>
+                            <input id="validation" type="text" name="validation">
                         </div>
-                        <input id="validation" type="text" name="validation">
                     </div>
-                    <div class="agree">
-                        <label for="agree">
-                            <input id="agree" type="checkbox" name="agree">
-                            <abbr title="required" aria-label="required">*</abbr>
-                            <span>我同意網站
-                                <a href="#">服務條款 </a>及<a href="#"> 隱私權政策 </a>
-                            </span>
-                        </label>
-                    </div>
+                </div>
+                <div class="agree">
+                    <label for="agree">
+                        <input id="agree" type="checkbox" name="agree">
+                        <abbr title="required" aria-label="required">*</abbr>
+                        <span>我同意網站
+                            <a href="#">服務條款 </a>及<a href="#"> 隱私權政策 </a>
+                        </span>
+                    </label>
                 </div>
             </form>
             <a href="index.html">
@@ -138,10 +140,6 @@
                 <li><a href="koc_list.html">KOC一覽</a></li>
                 <li><a href="index.html#consulting_form">行銷諮詢</a></li>
                 <li><a href="index.html#contact_us">聯絡我們</a></li>
-                <li>
-                    <a href="login.html"><span class="footer_login">登入</span></a>
-                    <a href="signup_rest.html"><span>註冊</span></a>
-                </li>
                 <li><a href="member_center.html">會員中心</a></li>
             </ul>
         </div>

@@ -33,7 +33,7 @@
                 </li>
             </ul>
             <a href="member_center.html">
-                <div class="nav_icon">
+                <div id="icon" class="nav_icon">
                     <img src="pic/btn_user.png" alt="會員中心">
                     <span>1</span>
                 </div>
@@ -553,10 +553,6 @@
                 <li><a href="koc_list.html">KOC一覽</a></li>
                 <li><a href="index.html#consulting_form">行銷諮詢</a></li>
                 <li><a href="index.html#contact_us">聯絡我們</a></li>
-                <li>
-                    <a href="login.html"><span class="footer_login">登入</span></a>
-                    <a href="signup_rest.html"><span>註冊</span></a>
-                </li>
                 <li><a href="member_center.html">會員中心</a></li>
             </ul>
         </div>
@@ -567,6 +563,18 @@
         </div>
     </footer>
     <script>
+        let has_login = sessionStorage.getItem("has_login");
+        let navIcon = document.getElementById("icon");
+        let notify = document.querySelector("#icon span");
+        console.log(has_login);
+        window.onload = function(){
+            if(has_login === "true"){
+                navIcon.style.backgroundColor = "#DE4917";
+                notify.style.display = "inline-block";
+            }else{
+                navIcon.style.backgroundColor = "#ECA07F";
+            }
+        }
         let kocName = document.getElementsByClassName("koc_name");
         let kocInfo = document.getElementsByClassName("koc_info");
         let infoClose = document.getElementsByClassName("info_close");

@@ -92,10 +92,6 @@
                 <li><a href="koc_list.html">KOC一覽</a></li>
                 <li><a href="index.html#consulting_form">行銷諮詢</a></li>
                 <li><a href="index.html#contact_us">聯絡我們</a></li>
-                <li>
-                    <a href="login.html"><span class="footer_login">登入</span></a>
-                    <a href="signup_rest.html"><span>註冊</span></a>
-                </li>
                 <li><a href="member_center.html">會員中心</a></li>
             </ul>
         </div>
@@ -113,6 +109,7 @@
             navIcon.style.bgColor = "#DE4917";
         }
         loginBtn[0].addEventListener("click", userLogin, false);
+        sessionStorage.setItem("has_login", "true");
     </script>
 </body>
 </html>
