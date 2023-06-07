@@ -16,8 +16,9 @@
     <link rel="icon" href="pic/favicon-32x32.png">
     <script src="https://kit.fontawesome.com/9b1b983220.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <nav id="navbar" class="navbar">
+<body id="page_top">
+    <nav class="navbar">
+        <input type="checkbox" name="" id="switch">
         <div class="nav_bg">
             <div class="logo">
                 <a href="index.html"><img src="pic/logo.png" alt="EATPO MATCH"></a>
@@ -31,12 +32,22 @@
                     <a href="login.html"><span class="login_link">登入</span></a>
                     <a href="signup_rest.html"><span>註冊</span></a>
                 </li>
+                <li id="member_center_page"><a href="member_center.html">會員中心</a></li>
+                <li id="logout"><a href="index.html">登出</a></li>
             </ul>
-            <a href="member_center.html">
-                <div class="nav_icon">
-                    <img src="pic/btn_user.png" alt="會員中心">
-                </div>
-            </a>
+            <div class="icon_wrap">
+                <label for="switch" class="hb">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <!-- <a href="member_center.html">
+                    <div id="icon" class="nav_icon">
+                        <img src="pic/btn_user.png" alt="會員中心">
+                        <span>1</span>
+                    </div>
+                </a> -->
+            </div>
         </div>
     </nav>
     <section class="breadcrumb">
@@ -45,7 +56,6 @@
         <a href="#">登入</a>
     </section>
     <section class="login">
-        
         <h2 class="login_title">歡迎登入
             <img src="pic/bracket_4.png" alt="">
         </h2>
@@ -92,24 +102,20 @@
                 <li><a href="koc_list.html">KOC一覽</a></li>
                 <li><a href="index.html#consulting_form">行銷諮詢</a></li>
                 <li><a href="index.html#contact_us">聯絡我們</a></li>
-                <li><a href="member_center.html">會員中心</a></li>
+                <li>
+                    <a href="login.html"><span class="footer_login">登入</span></a>
+                    <a href="signup_rest.html"><span>註冊</span></a>
+                </li>
+                <li id="member_center_page"><a href="member_center.html">會員中心</a></li>
             </ul>
         </div>
         <div class="copyright">
-            Copyright © EATPO MATCH 2023&nbsp;&nbsp;
-            本網站為個人專題作品&nbsp;&nbsp;
-            僅供學習, 展示之用
+            <span>Copyright © EATPO MATCH 2023</span>
+            <span>本網站為個人專題作品 僅供學習&展示之用</span>
+        </div>
+        <div class="page_top">
+            <a href="#page_top"><img src="pic/page_top.png" alt="Page Top"></a>
         </div>
     </footer>
-
-    <script>
-        let loginBtn = document.getElementsByClassName("login_btn");
-        let navIcon = document.getElementsByClassName("nav_icon");
-        function userLogin(){
-            navIcon.style.bgColor = "#DE4917";
-        }
-        loginBtn[0].addEventListener("click", userLogin, false);
-        sessionStorage.setItem("has_login", "true");
-    </script>
 </body>
 </html>

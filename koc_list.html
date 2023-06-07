@@ -16,8 +16,9 @@
     <link rel="icon" href="pic/favicon-32x32.png">
     <script src="https://kit.fontawesome.com/9b1b983220.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body id="page_top">
     <nav class="navbar">
+        <input type="checkbox" name="" id="switch">
         <div class="nav_bg">
             <div class="logo">
                 <a href="index.html"><img src="pic/logo.png" alt="EATPO MATCH"></a>
@@ -31,13 +32,22 @@
                     <a href="login.html"><span class="login_link">登入</span></a>
                     <a href="signup_rest.html"><span>註冊</span></a>
                 </li>
+                <li id="member_center_page"><a href="member_center.html">會員中心</a></li>
+                <li id="logout"><a href="index.html">登出</a></li>
             </ul>
-            <a href="member_center.html">
-                <div id="icon" class="nav_icon">
-                    <img src="pic/btn_user.png" alt="會員中心">
-                    <span>1</span>
-                </div>
-            </a>
+            <div class="icon_wrap">
+                <label for="switch" class="hb">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <!-- <a href="member_center.html">
+                    <div id="icon" class="nav_icon">
+                        <img src="pic/btn_user.png" alt="會員中心">
+                        <span>1</span>
+                    </div>
+                </a> -->
+            </div>
         </div>
     </nav>
     <section class="breadcrumb">
@@ -47,8 +57,15 @@
     </section>
     <section class="filter">
         <form class="filter_list">
-            <label for="followers">粉絲人數
-                <i class="fa-solid fa-caret-right"></i>
+            <div class="filter_close">
+                <img src="pic/info_close.png" alt="">
+            </div>
+            <label>
+                <span class="filter_title">
+                    粉絲人數 
+                    <i class="fa-solid fa-caret-right"></i>
+                    <i class="fa-solid fa-caret-down"></i>
+                </span>
                 <label for="two_k">
                     <input type="checkbox" name="two_k" id="two_k">
                     <span>2,000人↑</span>
@@ -64,7 +81,7 @@
                 <label for="ten_k">
                     <input type="checkbox" name="ten_k" id="ten_k">
                     <span>10,000人↑</span>
-                </label>
+                </label><br>
                 <label for="twenty_k">
                     <input type="checkbox" name="twenty_k" id="twenty_k">
                     <span>20,000人↑</span>
@@ -74,8 +91,12 @@
                     <span>30,000人↑</span>
                 </label>
             </label>
-            <label for="region">合作地區
-                <i class="fa-solid fa-caret-right"></i>
+            <label>
+                <span class="filter_title">
+                    合作地區
+                    <i class="fa-solid fa-caret-right"></i>
+                    <i class="fa-solid fa-caret-down"></i>
+                </span>
                 <label for="region_tnk">
                     <input type="checkbox" name="region_tnk" id="region_tnk">
                     <span>北北基</span>
@@ -95,7 +116,7 @@
                 <label for="region_kp">
                     <input type="checkbox" name="region_kp" id="region_kp">
                     <span>高屏</span>
-                </label>
+                </label><br>
                 <label for="region_yht">
                     <input type="checkbox" name="region_yht" id="region_yht">
                     <span>宜花東</span>
@@ -105,8 +126,12 @@
                     <span>澎金馬</span>
                 </label>
             </label>
-            <label for="category">風格類型
-                <i class="fa-solid fa-caret-right"></i>
+            <label class="filter_title">
+                <span class="filter_title">
+                    風格類型
+                    <i class="fa-solid fa-caret-right"></i>
+                    <i class="fa-solid fa-caret-down"></i>
+                </span>
                 <label for="portrait">
                     <input type="checkbox" name="portrait" id="portrait">
                     <span>人像</span>
@@ -132,8 +157,12 @@
                     <span>運動</span>
                 </label>
             </label>
-            <label for="budget">貼文預算
-                <i class="fa-solid fa-caret-right"></i>
+            <label class="filter_title">
+                <span class="filter_title">
+                    貼文預算
+                    <i class="fa-solid fa-caret-right"></i>
+                    <i class="fa-solid fa-caret-down"></i>
+                </span>
                 <label for="free_meals">
                     <input type="checkbox" name="free_meals" id="free_meals">
                     <span>餐點互惠</span>
@@ -149,7 +178,7 @@
                 <label for="fourk_d">
                     <input type="checkbox" name="fourk_d" id="fourk_d">
                     <span>4,000元</span>
-                </label>
+                </label><br>
                 <label for="fivek_d">
                     <input type="checkbox" name="fivek_d" id="fivek_d">
                     <span>5,000元</span>
@@ -160,7 +189,8 @@
                 </label>
             </label>
             <button class="reset_btn" type="reset">重設</button>
-            </form>    
+            <button class="filter_submit_btn" type="submit">確認</button>
+        </form>    
     </section>
     <section class="koc_list">
         <div class="koc_row_wrap">
@@ -171,6 +201,11 @@
                 <div class="add_count">5</div>
                 <div class="add_hint_box">待聯繫清單</div>
             </div>
+            <button class="filter_btn">
+                <i class="fa-solid fa-filter"></i>
+                <span>名單篩選</span>
+                <i class="fa-solid fa-angle-down"></i>
+            </button>
             <div class="koc_row">
                 <div class="koc_details">
                     <div class="koc_post">
@@ -248,8 +283,8 @@
                         <span>eatpomatch_04</span>
                     </div>
                 </div>
-            </div>
-            <div class="koc_row">
+            <!-- </div>
+            <div class="koc_row"> -->
                 <div class="koc_details">
                     <div class="koc_post">
                         <div class="koc_list_pic">
@@ -326,8 +361,8 @@
                         <span>eatpomatch_08</span>
                     </div>
                 </div>
-            </div>
-            <div class="koc_row">
+            <!-- </div>
+            <div class="koc_row"> -->
                 <div class="koc_details">
                     <div class="koc_post">
                         <div class="koc_list_pic">
@@ -404,8 +439,8 @@
                         <span>eatpomatch_12</span>
                     </div>
                 </div>
-            </div>
-            <div class="koc_row">
+            <!-- </div>
+            <div class="koc_row"> -->
                 <div class="koc_details">
                     <div class="koc_post">
                         <div class="koc_list_pic">
@@ -498,8 +533,11 @@
             <div class="info_bg">
                 <div class="info_content">
                     <div class="info_name">
-                        <img src="pic/info_name.png" alt="">
-                        eatpomatch_05
+                        <img src="pic/info_name_2.png" alt="">
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                            eatpomatch_05
+                        </a>
                     </div>
                     <div class="info_details">
                         <div class="info_item">
@@ -553,28 +591,22 @@
                 <li><a href="koc_list.html">KOC一覽</a></li>
                 <li><a href="index.html#consulting_form">行銷諮詢</a></li>
                 <li><a href="index.html#contact_us">聯絡我們</a></li>
-                <li><a href="member_center.html">會員中心</a></li>
+                <li>
+                    <a href="login.html"><span class="footer_login">登入</span></a>
+                    <a href="signup_rest.html"><span>註冊</span></a>
+                </li>
+                <li id="member_center_page"><a href="member_center.html">會員中心</a></li>
             </ul>
         </div>
         <div class="copyright">
-            Copyright © EATPO MATCH 2023&nbsp;&nbsp;
-            本網站為個人專題作品&nbsp;&nbsp;
-            僅供學習, 展示之用
+            <span>Copyright © EATPO MATCH 2023</span>
+            <span>本網站為個人專題作品 僅供學習&展示之用</span>
+        </div>
+        <div class="page_top">
+            <a href="#page_top"><img src="pic/page_top.png" alt="Page Top"></a>
         </div>
     </footer>
     <script>
-        let has_login = sessionStorage.getItem("has_login");
-        let navIcon = document.getElementById("icon");
-        let notify = document.querySelector("#icon span");
-        console.log(has_login);
-        window.onload = function(){
-            if(has_login === "true"){
-                navIcon.style.backgroundColor = "#DE4917";
-                notify.style.display = "inline-block";
-            }else{
-                navIcon.style.backgroundColor = "#ECA07F";
-            }
-        }
         let kocName = document.getElementsByClassName("koc_name");
         let kocInfo = document.getElementsByClassName("koc_info");
         let infoClose = document.getElementsByClassName("info_close");

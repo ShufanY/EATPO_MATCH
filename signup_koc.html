@@ -16,8 +16,9 @@
     <link rel="icon" href="pic/favicon-32x32.png">
     <script src="https://kit.fontawesome.com/9b1b983220.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <nav id="navbar" class="navbar">
+<body id="page_top">
+    <nav class="navbar">
+        <input type="checkbox" name="" id="switch">
         <div class="nav_bg">
             <div class="logo">
                 <a href="index.html"><img src="pic/logo.png" alt="EATPO MATCH"></a>
@@ -31,12 +32,22 @@
                     <a href="login.html"><span class="login_link">登入</span></a>
                     <a href="signup_rest.html"><span>註冊</span></a>
                 </li>
+                <li id="member_center_page"><a href="member_center.html">會員中心</a></li>
+                <li id="logout"><a href="index.html">登出</a></li>
             </ul>
-            <a href="member_center.html">
-                <div class="nav_icon">
-                    <img src="pic/btn_user.png" alt="會員中心">
-                </div>
-            </a>
+            <div class="icon_wrap">
+                <label for="switch" class="hb">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <!-- <a href="member_center.html">
+                    <div id="icon" class="nav_icon">
+                        <img src="pic/btn_user.png" alt="會員中心">
+                        <span>1</span>
+                    </div>
+                </a> -->
+            </div>
         </div>
     </nav>
     <section class="breadcrumb">
@@ -47,7 +58,7 @@
         <a href="#">我是KOC</a>
     </section>
     <section class="signup">
-        <h2 class="signup_title">會員註冊
+        <h2 class="signup_title koc">會員註冊
             <img src="pic/bracket_3.png" alt="">
         </h2>
         <div class="signup_tab">
@@ -103,10 +114,10 @@
                         <input id="igfollowers" type="text" name="igfollowers">
                         <label for="igposts">
                             <abbr title="required" aria-label="required">*</abbr>
-                            請提供2則與餐廳/美食相關的IG貼文網址
+                            請提供2則餐廳/美食相關IG貼文網址
                         </label>
                         <input id="igposts" type="url" name="igposts">
-                        <input id="igposts" type="url" name="igposts">
+                        <input class="igposts" type="url" name="igposts">
                     </div>
                     <div class="signup_choose">
                         <label class="choose_title">
@@ -127,7 +138,7 @@
                         
                         <label class="choose_title">
                             <abbr title="required" aria-label="required">*</abbr>
-                            KOC一覽頁縮圖 (請選擇餐廳/美食相關照片)
+                            KOC一覽頁縮圖 (餐廳/美食相關照片)
                         </label>
                         <div class="choose_wrap">
                             <label for="foodpic" class="foodpic">選擇照片上傳
@@ -231,22 +242,20 @@
                 <li><a href="koc_list.html">KOC一覽</a></li>
                 <li><a href="index.html#consulting_form">行銷諮詢</a></li>
                 <li><a href="index.html#contact_us">聯絡我們</a></li>
-                <li><a href="member_center.html">會員中心</a></li>
+                <li>
+                    <a href="login.html"><span class="footer_login">登入</span></a>
+                    <a href="signup_rest.html"><span>註冊</span></a>
+                </li>
+                <li id="member_center_page"><a href="member_center.html">會員中心</a></li>
             </ul>
         </div>
         <div class="copyright">
-            Copyright © EATPO MATCH 2023&nbsp;&nbsp;
-            本網站為個人專題作品&nbsp;&nbsp;
-            僅供學習, 展示之用
+            <span>Copyright © EATPO MATCH 2023</span>
+            <span>本網站為個人專題作品 僅供學習&展示之用</span>
+        </div>
+        <div class="page_top">
+            <a href="#page_top"><img src="pic/page_top.png" alt="Page Top"></a>
         </div>
     </footer>
-
-    <script>
-        let signupKocBtn = document.getElementsByTagName("button");
-        function signupKocClick(){
-	        window.alert("感謝您的註冊，接案資格審核中，團隊將在三個工作天內以信件通知，請您耐心等候 !");
-        }
-        signupKocBtn[0].addEventListener("click", signupKocClick, false);
-    </script>
 </body>
 </html>
