@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Secular+One&family=Nerko+One&display=swap" rel="stylesheet">
     <link rel="icon" href="pic/favicon-32x32.png">
     <script src="https://kit.fontawesome.com/9b1b983220.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"></script>
 </head>
 <body id="page_top">
     <nav class="navbar">
@@ -606,6 +607,36 @@
             <a href="#page_top"><img src="pic/page_top.png" alt="Page Top"></a>
         </div>
     </footer>
+    <script>
+        $(function(){
+            $(window).resize(function(){
+                winWidth = $(window).width();
+
+                if(winWidth < 768){
+                    $('.filter').css('display', 'none');
+                }else{
+                    $('.filter').css('display', 'flex');
+                }
+            })
+
+            $('.filter_btn').click(function(){
+                $('.filter').css('display', 'flex');
+            });
+            $('.filter_close').click(function(){
+                $('.filter').css('display', 'none');
+            });
+            $('.filter_submit_btn').click(function(){
+                $('.filter').css('display', 'none');
+            });
+            $(window).scroll(function () {
+                console.log("window")
+            });
+            $('.filter').scroll(function () {
+                console.log("filter")
+            });
+        });
+    </script>
+
     <script>
         let kocName = document.getElementsByClassName("koc_name");
         let kocInfo = document.getElementsByClassName("koc_info");
