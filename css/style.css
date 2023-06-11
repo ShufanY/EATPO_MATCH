@@ -206,7 +206,7 @@ span.login_link::after{
     border-radius: 20px;
     margin: 0px 6px -3px 9px;
 }
-#member_center_page{
+.member_center_page{
     display: none;
 }
 #logout{
@@ -4872,6 +4872,7 @@ table.block_table{
 @media screen and (min-width: 768px){
     .block_table_wrap{
         width: 100%;
+        overflow-x: hidden;
     }
 }
 @media screen and (min-width: 1200px){
@@ -4960,6 +4961,7 @@ table.block_table td{
         width: 80px;
     }
 }
+
 table.block_table td:nth-child(1) a,
 table.block_table td:nth-child(2) a,
 table.block_table td:nth-child(3) a,
