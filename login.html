@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Secular+One&family=Nerko+One&display=swap" rel="stylesheet">
     <link rel="icon" href="pic/favicon-32x32.png">
     <script src="https://kit.fontawesome.com/9b1b983220.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"></script>
 </head>
 <body id="page_top">
     <nav class="navbar">
@@ -71,7 +72,7 @@
                     </label>
                     <input id="password" type="password" name="password" placeholder="請輸入6-15碼英數混合密碼">
                     <div class="password_icon">
-                        <i class="fa-solid fa-eye-slash"></i>
+                        <i id="check_eye" class="fa-solid fa-eye"></i>
                     </div>
                 </div>
                 <div class="login_action">
@@ -119,6 +120,22 @@
     </footer>
 
     <script>
+        // 密碼顯示及隱藏
+        let checkEye = document.getElementById("check_eye");
+        let password = document.getElementById("password");
+        checkEye.addEventListener("click", function(e){
+            if(e.target.classList.contains('fa-eye')){
+                e.target.classList.remove('fa-eye');
+                e.target.classList.add('fa-eye-slash');
+                password.setAttribute('type', 'text');
+            }else{
+                e.target.classList.remove('fa-eye-slash');
+                e.target.classList.add('fa-eye');
+                password.setAttribute('type', 'password');
+            }
+        });
+        
+        // 紀錄登入的狀態
         let loginBtn = document.getElementsByClassName("login_btn");
         let notLogin = document.getElementsByClassName("not_login");
         let memberCenter = document.getElementsByClassName("member_center_page");
@@ -126,12 +143,12 @@
         function userLogin(){
             notLogin[0].style.display = "none";
             notLogin[1].style.display = "none";
-            memberCenter[0].style.display = "inline_block";
-            memberCenter[1].style.display = "inline_block";
-            logout.style.display = "inline_block";
+            memberCenter[0].style.display = "inline";
+            memberCenter[1].style.display = "inline";
+            logout.style.display = "inline";
+            sessionStorage.setItem("has_login", "true");
         }
         loginBtn[0].addEventListener("click", userLogin, false);
-        sessionStorage.setItem("has_login", "true");
     </script>
 </body>
 </html>

@@ -109,22 +109,22 @@ nav.navbar{
     
 }
 
-.nav_icon span{
+.member_center_page span{
     font-size: 12px;
-    line-height: 15px;
+    line-height: 16px;
     color: #F8F6F0;
     text-align: center;
     font-weight: 500;
-    display: none;
+    display: inline-block;
     width: 16px;
     height: 16px;
     border-radius: 10px;
     background-color: #F38C09;
     text-decoration: none;
-    border: 2px solid #F8F6F0;
-    position: absolute;
+    /* border: 2px solid #F8F6F0; */
+    /* position: absolute;
     bottom: -3px;
-    right: -12px;
+    right: -12px; */
 }
 .nav_list{
     width: 80%;
@@ -2681,6 +2681,7 @@ h2.login_title::after{
     font-size: 14px;
     margin-top: -46px;
     margin-left: 250px;
+    cursor: pointer;
 }
 @media screen and (min-width: 420px){
     .password_icon{
@@ -3334,7 +3335,9 @@ button.signup_rest_btn i{
     right: 5%;
     top: 20%;
 }
-
+#check_eye, #check_eye_again{
+    cursor: pointer;
+}
 
 /* 會員註冊_KOC */
 
@@ -4698,6 +4701,7 @@ input[type="checkbox"]#post_switch:checked + .manage_list .manage_title ul{
     top: -6px;
     z-index: 2;
 }
+
 @media screen and (min-width: 380px){
     .message_notify::after{
         left: 190px;

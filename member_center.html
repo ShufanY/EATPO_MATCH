@@ -29,11 +29,11 @@
                 <li><a href="koc_list.html">KOC一覽</a></li>
                 <li><a href="index.html#consulting_form">行銷諮詢</a></li>
                 <li><a href="index.html#contact_us">聯絡我們</a></li>
-                <li>
+                <li class="not_login">
                     <a href="login.html"><span class="login_link">登入</span></a>
                     <a href="signup_rest.html"><span>註冊</span></a>
                 </li>
-                <li id="member_center_page"><a href="member_center.html">會員中心</a></li>
+                <li class="member_center_page"><a href="member_center.html">會員中心</a></li>
                 <li id="logout"><a href="index.html">登出</a></li>
             </ul>
             <div class="icon_wrap">
@@ -265,11 +265,11 @@
                 <li><a href="koc_list.html">KOC一覽</a></li>
                 <li><a href="index.html#consulting_form">行銷諮詢</a></li>
                 <li><a href="index.html#contact_us">聯絡我們</a></li>
-                <li>
+                <li class="not_login">
                     <a href="login.html"><span class="footer_login">登入</span></a>
                     <a href="signup_rest.html"><span>註冊</span></a>
                 </li>
-                <li id="member_center_page"><a href="member_center.html">會員中心</a></li>
+                <li class="member_center_page"><a href="member_center.html">會員中心</a></li>
             </ul>
         </div>
         <div class="copyright">
@@ -280,6 +280,37 @@
             <a href="#page_top"><img src="pic/page_top.png" alt="Page Top"></a>
         </div>
     </footer>
-    
+    <script>
+        // 紀錄登入或登出的狀態
+        let has_login = sessionStorage.getItem("has_login");
+        let notLogin = document.getElementsByClassName("not_login");
+        let memberCenter = document.getElementsByClassName("member_center_page");
+        let logout = document.getElementById("logout");
+        console.log(has_login);
+        window.onload = function(){
+            if(has_login === "true"){
+                notLogin[0].style.display = "none";
+                notLogin[1].style.display = "none";
+                memberCenter[0].style.display = "inline";
+                memberCenter[1].style.display = "inline";
+                logout.style.display = "inline";
+            }else if(has_login === "false"){
+                notLogin[0].style.display = "inline";
+                notLogin[1].style.display = "inline";
+                memberCenter[0].style.display = "none";
+                memberCenter[1].style.display = "none";
+                logout.style.display = "none";
+            }
+        }
+        function userLogout(){
+            notLogin[0].style.display = "inline";
+            notLogin[1].style.display = "inline";
+            memberCenter[0].style.display = "none";
+            memberCenter[1].style.display = "none";
+            logout.style.display = "none";
+            sessionStorage.setItem("has_login", "false");
+        }
+        logout.addEventListener("click", userLogout, false);
+    </script>
 </body>
 </html>
