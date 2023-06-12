@@ -3042,11 +3042,9 @@ h2.signup_title.koc::after{
     position: relative;
 }
 label.choose_title.category_label, .charge_label, .validation_label{
-    margin-top: 11px;
+    margin-top: 12px;
 }
-.region_label{
-    margin-top: -1px;
-}
+
 .signup_fields label i{
     color: #9c918ac0;
     font-size: 14px;
