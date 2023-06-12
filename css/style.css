@@ -3041,6 +3041,12 @@ h2.signup_title.koc::after{
     margin-left: 6px;
     position: relative;
 }
+label.choose_title.category_label, .charge_label, .validation_label{
+    margin-top: 11px;
+}
+.region_label{
+    margin-top: -1px;
+}
 .signup_fields label i{
     color: #9c918ac0;
     font-size: 14px;
@@ -3191,9 +3197,11 @@ label.kocpic, label.foodpic{
     margin-left: 6px;
 }
 
+
+/* ---------------------------select2 */
 select{
     font-family: 'Noto Sans TC', sans-serif;
-    width: 190px;
+    width: 280px;
     height: 44px;
     border-radius: 10px;
     border: 2px solid #9C918A;
@@ -3208,11 +3216,83 @@ select{
     padding: 0px 8px 0px 12px;
     outline: none;
     appearance: none;
-    background-image: url(../pic/select_arrow.png);
-    background-size: 15%;
-    background-repeat: no-repeat;
-    background-position:bottom -3px right 10px;
 }
+
+.select2-selection{
+    font-family: 'Noto Sans TC', sans-serif !important;
+    width: 280px;
+    height: 44px;
+    border-radius: 10px !important;
+    border: 2px solid #9C918A !important;
+    background-color: #fff !important;
+    cursor: pointer;
+    margin-bottom: 4px;
+    padding: 0px 8px;
+    line-height: 28px;
+    letter-spacing: 1.5px;
+}
+@media screen and (min-width: 420px){
+    select{
+        width: 320px;
+    }
+    .select2-selection{
+        width: 320px;
+    }
+}
+@media screen and (min-width: 1024px){
+    select{
+        width: 400px;
+    }
+    .select2-selection{
+        width: 400px;
+    }
+}
+.select2-selection__choice{
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    color: #432F28;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    line-height: 32px;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 10px;
+    padding: 0px 8px;
+    margin: 0 !important;
+    /* margin-right: 8px; */
+}
+textarea.select2-search__field[type]{
+    font-family: 'Noto Sans TC', sans-serif !important;
+    font-size: 16px !important;
+    line-height: 28px !important;
+    height: 30px !important;
+    color: #432F28 !important;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+}
+span.select2-selection__choice__display{
+    line-height: 28px;
+}
+.select2-selection__choice__remove{
+    border-right: none !important;
+}
+.select2-selection__choice__remove span{
+    font-size: 24px;
+    color: #432F28;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    line-height: 32px;
+}
+.select2-results__options, #select2-category-results{
+    border-radius: 10px !important;
+    border: 2px solid #9C918A !important;
+    background-color: #fff !important;
+}
+.select2-dropdown--above, .select2-dropdown--below, .select2-results{
+    border-radius: 10px !important;
+}
+/* ---------------------------select2 */
+
 
 .validation{
     position: relative;
@@ -4661,6 +4741,9 @@ input[type="checkbox"]#post_switch:checked + .manage_list .manage_title ul{
         padding-bottom: 8px;
         padding-left: 0px;
         padding-right: 0px;
+    }
+    .manage_title li a.sidenav_posts{
+        color: #432F28;
     }
     .manage_title li a::after{
         display: none;

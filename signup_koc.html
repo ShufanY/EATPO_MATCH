@@ -16,6 +16,8 @@
     <link rel="icon" href="pic/favicon-32x32.png">
     <script src="https://kit.fontawesome.com/9b1b983220.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 <body id="page_top">
     <nav class="navbar">
@@ -42,12 +44,6 @@
                     <span></span>
                     <span></span>
                 </label>
-                <!-- <a href="member_center.html">
-                    <div id="icon" class="nav_icon">
-                        <img src="pic/btn_user.png" alt="會員中心">
-                        <span>1</span>
-                    </div>
-                </a> -->
             </div>
         </div>
     </nav>
@@ -152,12 +148,11 @@
                                 </div>
                             </div>
                         </div>
-                        <label for="region" class="choose_title">
+                        <label for="region" class="choose_title region_label">
                             <abbr title="required" aria-label="required">*</abbr>
                             合作地區
                         </label>
-                        <select name="region" id="region">
-                            <option value="">請選擇1~3個</option>
+                        <select class="js-example-basic-multiple" name="region" id="region" multiple="multiple">
                             <option value="taipei">台北</option>
                             <option value="newtaipei">新北</option>
                             <option value="keelung">基隆</option>
@@ -179,12 +174,11 @@
                             <option value="matsu">馬祖</option>
                             <option value="penghu">澎湖</option>
                         </select>
-                        <label for="category" class="choose_title">
+                        <label for="category" class="choose_title category_label">
                             <abbr title="required" aria-label="required">*</abbr>
                             貼文類型
                         </label>
-                        <select name="category" id="category">
-                            <option value="">請選擇1~3個</option>
+                        <select class="js-example-basic-multiple" name="category" id="category" multiple>
                             <option value="taipei">人像</option>
                             <option value="taipei">插畫</option>
                             <option value="taipei">美食</option>
@@ -192,12 +186,11 @@
                             <option value="taipei">寵物</option>
                             <option value="taipei">運動</option>
                         </select>
-                        <label for="charge" class="choose_title">
+                        <label for="charge" class="choose_title charge_label">
                             <abbr title="required" aria-label="required">*</abbr>
                             貼文收費
                         </label>
-                        <select name="charge" id="charge">
-                            <option value="">請選擇最低費用</option>
+                        <select class="js-example-basic-single" name="charge" id="charge" multiple>
                             <option value="taipei">餐點互惠</option>
                             <option value="taipei">2,000元</option>
                             <option value="taipei">3,000元</option>
@@ -205,7 +198,7 @@
                             <option value="taipei">5,000元</option>
                             <option value="taipei">另外洽談</option>
                         </select>
-                        <div class="validation">
+                        <div class="validation validation_label">
                             <label for="validation" class="choose_title">
                                 <abbr title="required" aria-label="required">*</abbr>
                                 請輸入右側驗證碼
@@ -300,6 +293,19 @@
         }
         signupKoc[0].addEventListener("click", userLogin, false);
         sessionStorage.setItem("has_login", "true");
+    </script>
+    <script>
+        // 下拉式選單 select2
+        $(document).ready(function(){
+            $('.js-example-basic-multiple').select2({
+                maximumSelectionLength: 3,
+                placeholder: "請選擇1~3個",
+            });
+            $('.js-example-basic-single').select2({
+                maximumSelectionLength: 1,
+                placeholder: "請選擇最低費用",
+            });
+        });
     </script>
 </body>
 </html>
